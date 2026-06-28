@@ -695,18 +695,29 @@ footer{
 <nav>
   <div class="logo" onclick="reopenGate()" style="cursor:pointer">Future-Proof <span class="logo-tag">2026</span></div>
   <div class="nav-links" id="nav-links">
-    <a href="#" onclick="showTab('home');closeMenu();return false;" id="nav-home" class="active">Home</a>
-    <a href="#" onclick="showTab('quiz');closeMenu();return false;" id="nav-quiz">Career Quiz</a>
-    <a href="#" onclick="showTab('industries');closeMenu();return false;" id="nav-industries">Industries</a>
-    <a href="#" onclick="showTab('companies');closeMenu();return false;" id="nav-companies">Companies</a>
-    <a href="#" onclick="showTab('getready');closeMenu();return false;" id="nav-getready">Get Ready</a>
-    <a href="#" onclick="showTab('quiz');closeMenu();return false;" class="nav-cta btn">Find My Path →</a>
+    <a href="#" onclick="showTab('home');return false;" id="nav-home" class="active">Home</a>
+    <a href="#" onclick="showTab('quiz');return false;" id="nav-quiz">Career Quiz</a>
+    <a href="#" onclick="showTab('industries');return false;" id="nav-industries">Industries</a>
+    <a href="#" onclick="showTab('companies');return false;" id="nav-companies">Companies</a>
+    <a href="#" onclick="showTab('getready');return false;" id="nav-getready">Get Ready</a>
+    <a href="#" onclick="showTab('quiz');return false;" class="nav-cta btn">Find My Path →</a>
     <button onclick="reopenGate()" title="Change your profile" style="background:rgba(255,255,255,0.55);border:1px solid rgba(30,58,95,0.15);border-radius:8px;padding:0.35rem 0.65rem;font-size:0.8rem;cursor:pointer;color:var(--navy);font-weight:700;line-height:1;margin-left:0.25rem;font-family:inherit" id="nav-who-btn">👤</button>
   </div>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
+
+<!-- Mobile drawer (outside nav to avoid iOS sticky/fixed bug) -->
+<div id="mobile-drawer" style="display:none;position:fixed;top:60px;left:0;right:0;bottom:0;background:rgba(240,246,255,0.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:500;flex-direction:column;padding:1rem;overflow-y:auto;">
+  <a href="#" onclick="showTab('home');closeMenu();return false;" style="display:block;padding:1rem;font-size:1rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(30,58,95,0.07);border-radius:10px">Home</a>
+  <a href="#" onclick="showTab('quiz');closeMenu();return false;" style="display:block;padding:1rem;font-size:1rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(30,58,95,0.07);border-radius:10px">Career Quiz</a>
+  <a href="#" onclick="showTab('industries');closeMenu();return false;" style="display:block;padding:1rem;font-size:1rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(30,58,95,0.07);border-radius:10px">Industries</a>
+  <a href="#" onclick="showTab('companies');closeMenu();return false;" style="display:block;padding:1rem;font-size:1rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(30,58,95,0.07);border-radius:10px">Companies</a>
+  <a href="#" onclick="showTab('getready');closeMenu();return false;" style="display:block;padding:1rem;font-size:1rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(30,58,95,0.07);border-radius:10px">Get Ready</a>
+  <a href="#" onclick="showTab('quiz');closeMenu();return false;" style="display:block;margin-top:1rem;padding:1rem;font-size:1rem;font-weight:700;color:#fff;text-decoration:none;background:linear-gradient(135deg,var(--navy),#0c5a8a);border-radius:10px;text-align:center">Find My Path →</a>
+  <a href="#" onclick="reopenGate();closeMenu();return false;" style="display:block;margin-top:0.5rem;padding:1rem;font-size:1rem;font-weight:600;color:var(--navy);text-decoration:none;text-align:center">👤 Change Profile</a>
+</div>
 
 <!-- ════════════════════════════════════════
      HOME TAB
@@ -1656,13 +1667,13 @@ footer{
 // ── HAMBURGER ──
 function toggleMenu(){
   const h=document.getElementById('hamburger');
-  const n=document.getElementById('nav-links');
-  h.classList.toggle('open');
-  n.classList.toggle('open');
+  const d=document.getElementById('mobile-drawer');
+  const isOpen=h.classList.toggle('open');
+  d.style.display=isOpen?'flex':'none';
 }
 function closeMenu(){
   document.getElementById('hamburger').classList.remove('open');
-  document.getElementById('nav-links').classList.remove('open');
+  document.getElementById('mobile-drawer').style.display='none';
 }
 // ── TAB NAVIGATION ──
 const TABS = ['home','quiz','industries','companies','getready'];
