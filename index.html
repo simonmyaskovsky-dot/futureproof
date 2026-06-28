@@ -76,7 +76,28 @@ nav{
 .nav-links a.active{color:var(--navy);background:rgba(30,58,95,0.1)}
 .nav-cta{background:linear-gradient(135deg,var(--navy),#0c5a8a)!important;color:#fff!important;border-radius:8px;box-shadow:0 2px 10px rgba(30,58,95,0.25)!important}
 .nav-cta:hover{opacity:0.9;transform:translateY(-1px);box-shadow:0 4px 14px rgba(30,58,95,0.35)!important}
-@media(max-width:768px){.nav-links{display:none}}
+/* ── HAMBURGER MENU ── */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:0.4rem;border:none;background:none;z-index:200}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all 0.25s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:768px){
+  .nav-links{
+    display:none;position:fixed;inset:60px 0 0 0;background:rgba(240,246,255,0.97);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    flex-direction:column;align-items:stretch;gap:0;padding:1rem;z-index:150;
+    overflow-y:auto;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{font-size:1rem;padding:0.9rem 1rem;border-radius:10px;border-bottom:1px solid rgba(30,58,95,0.07)}
+  .nav-links .nav-cta{margin-top:0.5rem;text-align:center;padding:0.9rem}
+  .hamburger{display:flex}
+  .wrap{padding:0 1rem}
+  .section{padding:2.5rem 0}
+  .hero{padding:2.5rem 1rem 2rem}
+  .stat-strip-inner{gap:1.5rem}
+}
 
 /* ── TAB PAGES ── */
 .tab-page{display:none}
@@ -664,15 +685,18 @@ footer{
 <!-- ── NAV ── -->
 <nav>
   <div class="logo" onclick="reopenGate()" style="cursor:pointer">Future-Proof <span class="logo-tag">2026</span></div>
-  <div class="nav-links">
-    <a href="#" onclick="showTab('home');return false;" id="nav-home" class="active">Home</a>
-    <a href="#" onclick="showTab('quiz');return false;" id="nav-quiz">Career Quiz</a>
-    <a href="#" onclick="showTab('industries');return false;" id="nav-industries">Industries</a>
-    <a href="#" onclick="showTab('companies');return false;" id="nav-companies">Companies</a>
-    <a href="#" onclick="showTab('getready');return false;" id="nav-getready">Get Ready</a>
-    <a href="#" onclick="showTab('quiz');return false;" class="nav-cta btn">Find My Path →</a>
+  <div class="nav-links" id="nav-links">
+    <a href="#" onclick="showTab('home');closeMenu();return false;" id="nav-home" class="active">Home</a>
+    <a href="#" onclick="showTab('quiz');closeMenu();return false;" id="nav-quiz">Career Quiz</a>
+    <a href="#" onclick="showTab('industries');closeMenu();return false;" id="nav-industries">Industries</a>
+    <a href="#" onclick="showTab('companies');closeMenu();return false;" id="nav-companies">Companies</a>
+    <a href="#" onclick="showTab('getready');closeMenu();return false;" id="nav-getready">Get Ready</a>
+    <a href="#" onclick="showTab('quiz');closeMenu();return false;" class="nav-cta btn">Find My Path →</a>
     <button onclick="reopenGate()" title="Change your profile" style="background:rgba(255,255,255,0.55);border:1px solid rgba(30,58,95,0.15);border-radius:8px;padding:0.35rem 0.65rem;font-size:0.8rem;cursor:pointer;color:var(--navy);font-weight:700;line-height:1;margin-left:0.25rem;font-family:inherit" id="nav-who-btn">👤</button>
   </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- ════════════════════════════════════════
@@ -684,7 +708,7 @@ footer{
   <div class="hero">
     <div class="hero-eyebrow"><div class="hero-dot"></div> Updated May 2026 · Research-backed guidance</div>
     <h1>AI is changing every career.<br><span class="grad">Understand what comes next.</span></h1>
-    <p class="hero-sub">A research-based guide for students and parents navigating the AI economy.</p>
+    <p class="hero-sub">Navigate the AI economy. Find your path.</p>
     <div class="hero-btns">
       <a href="#" onclick="showTab('quiz');return false;" class="btn btn-primary">Take the Career Quiz →</a>
       <a href="#" onclick="showTab('industries');return false;" class="btn btn-outline">Explore by Industry</a>
@@ -708,10 +732,10 @@ footer{
     <div class="stat-strip-inner">
       <div><div class="stat-num" data-count="92" data-suffix="M" data-prefix="">0M</div><div class="stat-label">Jobs displaced by AI by 2030</div><div class="stat-source">WEF 2025</div></div>
       <div><div class="stat-num" data-count="170" data-suffix="M" data-prefix="">0M</div><div class="stat-label">New roles created by 2030</div><div class="stat-source">WEF 2025</div></div>
-      <div><div class="stat-num" data-count="19" data-suffix="%" data-prefix="">0%</div><div class="stat-label">Of US workers have 50%+ of tasks LLM-exposed</div><div class="stat-source">Eloundou et al., Science 2023</div></div>
+      <div><div class="stat-num" data-count="19" data-suffix="%" data-prefix="">0%</div><div class="stat-label">Of US workers have 50%+ of tasks AI-exposed</div><div class="stat-source">Eloundou et al., Science 2023</div></div>
       <div><div class="stat-num" data-count="40" data-suffix="%" data-prefix="+">0%</div><div class="stat-label">Nurse Practitioner growth by 2034</div><div class="stat-source">BLS 2024–2034</div></div>
       <div><div class="stat-num" data-count="78" data-suffix="M" data-prefix="+">0M</div><div class="stat-label">Net new jobs globally by 2030</div><div class="stat-source">WEF Future of Jobs 2025</div></div>
-      <div><div class="stat-num" data-count="4.1" data-suffix="%" data-prefix="" data-decimals="1">0%</div><div class="stat-label">AI task exposure in skilled trades — the lowest of any sector</div><div class="stat-source">Anthropic Economic Index 2026</div></div>
+      <div><div class="stat-num" data-count="4.1" data-suffix="%" data-prefix="" data-decimals="1">0%</div><div class="stat-label">AI exposure in skilled trades — lowest of any sector</div><div class="stat-source">Anthropic Economic Index 2026</div></div>
     </div>
   </div>
 
@@ -720,8 +744,8 @@ footer{
     <div style="max-width:1100px;margin:0 auto">
       <div style="background:rgba(255,255,255,0.48);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,0.65);border-radius:20px;padding:2.75rem 3rem;text-align:center;box-shadow:0 8px 32px rgba(30,58,95,0.09)">
         <div style="font-size:0.68rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:1.25rem;opacity:0.75">The Key Insight</div>
-        <p style="font-size:clamp(1.1rem,2.2vw,1.45rem);font-weight:700;line-height:1.5;color:var(--text);max-width:700px;margin:0 auto 1rem;letter-spacing:-0.3px">You don't need to know the exact career yet. AI will reshape whatever path you choose — the skill that matters is learning to <em>use it as a tool</em> rather than fear it as a threat.</p>
-        <p style="font-size:0.92rem;color:var(--muted);font-weight:500;max-width:520px;margin:0 auto">The people adapting well right now aren't more talented. They're more curious and more willing to experiment.</p>
+        <p style="font-size:clamp(1.1rem,2.2vw,1.45rem);font-weight:700;line-height:1.5;color:var(--text);max-width:700px;margin:0 auto 1rem;letter-spacing:-0.3px">The skill that matters isn't picking the right career — it's learning to <em>use AI as a tool</em> rather than fear it as a threat.</p>
+        <p style="font-size:0.92rem;color:var(--muted);font-weight:500;max-width:520px;margin:0 auto">The people adapting best aren't more talented. They're more willing to experiment.</p>
       </div>
     </div>
   </div>
@@ -761,32 +785,32 @@ footer{
         <div class="hl-card">
           <div class="hl-source">TechRepublic · April 2026</div>
           <h3><mark>16,000 jobs</mark> displaced per month in the US — Gen Z hit the hardest</h3>
-          <p>Entry-level data entry, customer service, admin, and help desk roles face the highest displacement rates. Workers aged 22–25 are the most affected demographic.</p>
+          <p>Entry-level data entry, admin, and help desk roles hit hardest. Workers aged 22–25 most affected.</p>
         </div>
         <div class="hl-card">
           <div class="hl-source">U.S. News · April 2026</div>
           <h3>Students searching for <mark>"AI-proof" majors</mark> — but experts say there aren't any</h3>
-          <p>There's no such thing as a safe major, only a smart approach to any major. Adaptability and AI fluency matter more than the field itself.</p>
+          <p>No major is safe — but any major can work. AI fluency and adaptability matter more than the field.</p>
         </div>
         <div class="hl-card">
           <div class="hl-source">Anthropic Economic Index · March 2026</div>
           <h3>AI handles the <mark>hardest parts</mark> of jobs first — not the easiest</h3>
-          <p>Analysis of 2 million AI conversations: AI tackles the highest-skill components of tasks, reshaping what expertise means across every profession.</p>
+          <p>From 2M AI conversations: AI takes on the hardest parts first, not the easiest — reshaping what expertise means.</p>
         </div>
         <div class="hl-card">
           <div class="hl-source">CNBC · April 2026</div>
           <h3><mark>20,000 job cuts</mark> at Meta &amp; Microsoft tied directly to AI restructuring</h3>
-          <p>Over 92,000 tech workers laid off in 2026 so far. Executives at both companies cited AI-driven efficiency, not economic slowdown, as the cause.</p>
+          <p>92,000+ tech workers laid off in 2026. Executives cite AI efficiency — not a slowdown.</p>
         </div>
         <div class="hl-card">
           <div class="hl-source">Bloomberg Law · May 2026</div>
           <h3>California becomes <mark>first state</mark> to mandate AI workforce displacement tracking</h3>
-          <p>Governor Newsom directed agencies to study AI's workforce impact and develop real-time dashboards tracking AI-driven job losses by sector.</p>
+          <p>Newsom directed agencies to build real-time dashboards tracking AI-driven job losses by sector.</p>
         </div>
         <div class="hl-card">
           <div class="hl-source">IEEE Spectrum · March 2026</div>
           <h3>Entry-level software engineer hiring <mark>falls 25%</mark> — but total jobs still grow</h3>
-          <p>Junior dev employment dropped ~20% since 2022. Yet software jobs overall are projected to grow 17% through 2033. The bar is higher, not gone.</p>
+          <p>Junior dev roles down ~20% since 2022 — but overall software jobs still grow 17% through 2033. The bar is higher, not gone.</p>
         </div>
       </div>
 
@@ -826,10 +850,7 @@ footer{
     <!-- AI Interest Explorer -->
     <div class="interest-explorer">
       <div id="interest-explorer-form">
-        <div class="ie-header">
-          <h3>Describe Your Interests</h3>
-        </div>
-        <textarea id="interest-input" class="interest-textarea" placeholder="Example: I like understanding how people think and make decisions. I enjoy reading about psychology and economics. I'm good at listening and explaining things to others. Numbers don't scare me but I don't want to spend all day on spreadsheets..." rows="5"></textarea>
+        <textarea id="interest-input" class="interest-textarea" placeholder="Describe your interests, strengths, or the kind of work that sounds meaningful to you…" rows="5"></textarea>
         <div class="ie-actions">
           <button class="btn btn-primary" onclick="launchAIExplorer()" style="font-size:0.95rem;padding:0.8rem 1.75rem">Get AI Career Guidance →</button>
         </div>
@@ -1623,6 +1644,17 @@ footer{
 <footer>Future-Proof · Research as of May 2026 · Sources: Anthropic, WEF, Goldman Sachs, McKinsey, BLS, ILO · For educational purposes</footer>
 
 <script>
+// ── HAMBURGER ──
+function toggleMenu(){
+  const h=document.getElementById('hamburger');
+  const n=document.getElementById('nav-links');
+  h.classList.toggle('open');
+  n.classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('nav-links').classList.remove('open');
+}
 // ── TAB NAVIGATION ──
 const TABS = ['home','quiz','industries','companies','getready'];
 function showTab(id, pushState=true) {
