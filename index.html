@@ -663,7 +663,7 @@ footer{
 
 <!-- ── NAV ── -->
 <nav>
-  <div class="logo" onclick="showTab('home')" style="cursor:pointer">Future-Proof <span class="logo-tag">2026</span></div>
+  <div class="logo" onclick="reopenGate()" style="cursor:pointer">Future-Proof <span class="logo-tag">2026</span></div>
   <div class="nav-links">
     <a href="#" onclick="showTab('home');return false;" id="nav-home" class="active">Home</a>
     <a href="#" onclick="showTab('quiz');return false;" id="nav-quiz">Career Quiz</a>
@@ -827,9 +827,7 @@ footer{
     <div class="interest-explorer">
       <div id="interest-explorer-form">
         <div class="ie-header">
-          <span class="ie-badge">AI-Powered</span>
           <h3>Describe Your Interests</h3>
-          <p>Tell us what you enjoy, what you're curious about, or what kind of work sounds meaningful to you. We'll analyze it against current labor market research and return a personalized career guidance report.</p>
         </div>
         <textarea id="interest-input" class="interest-textarea" placeholder="Example: I like understanding how people think and make decisions. I enjoy reading about psychology and economics. I'm good at listening and explaining things to others. Numbers don't scare me but I don't want to spend all day on spreadsheets..." rows="5"></textarea>
         <div class="ie-actions">
@@ -1627,7 +1625,7 @@ footer{
 <script>
 // ── TAB NAVIGATION ──
 const TABS = ['home','quiz','industries','companies','getready'];
-function showTab(id) {
+function showTab(id, pushState=true) {
   TABS.forEach(t => {
     const page = document.getElementById('page-'+t);
     const link = document.getElementById('nav-'+t);
@@ -1635,8 +1633,12 @@ function showTab(id) {
     if(link) link.classList.toggle('active', t===id);
   });
   window.scrollTo({top:0,behavior:'smooth'});
-  history.replaceState(null,'','#'+id);
+  if(pushState) history.pushState({tab:id}, '', '#'+id);
 }
+window.addEventListener('popstate', e => {
+  const tab = (e.state && e.state.tab) || (location.hash.slice(1)) || 'home';
+  if(TABS.includes(tab)) showTab(tab, false);
+});
 window.addEventListener('DOMContentLoaded', () => {
   const hash = window.location.hash.replace('#','');
   showTab(TABS.includes(hash) ? hash : 'home');
