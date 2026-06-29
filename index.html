@@ -11,7 +11,7 @@
   gtag('js', new Date());
   gtag('config', 'G-8TEFTZ0WHN');
 </script>
-<title>Future-Proof · AI Career Guide 2026</title>
+<title>Future-Proof · Career Path Finder 2026</title>
 <style>
 :root {
   --bg: #EEF2FF;
@@ -182,6 +182,165 @@ nav{
 .hero h1 .grad{background:linear-gradient(130deg,var(--navy) 20%,#0891B2 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-sub{font-size:1.05rem;color:var(--muted);max-width:500px;margin:0 auto 2.25rem;font-weight:500;position:relative;z-index:1}
 .hero-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+
+.home-hero{
+  padding:4.5rem 2rem 2rem;
+  position:relative;
+  overflow:hidden;
+}
+.home-hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(110deg,rgba(255,255,255,0.38),rgba(255,255,255,0.04)),
+    radial-gradient(ellipse 65% 60% at 75% 5%,rgba(8,145,178,0.10),transparent 62%);
+  pointer-events:none;
+}
+.hero-shell{
+  max-width:1120px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(320px,0.95fr);
+  gap:2rem;
+  align-items:center;
+  position:relative;
+  z-index:1;
+}
+.hero-copy{text-align:left}
+.hero-copy h1{
+  font-size:clamp(2.25rem,5vw,4.45rem);
+  font-weight:900;
+  line-height:1.02;
+  letter-spacing:-2px;
+  max-width:760px;
+  margin:0 0 1rem;
+}
+.hero-copy h1 .grad{background:linear-gradient(130deg,var(--navy) 10%,#0891B2 78%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-copy .hero-sub{margin:0 0 1.6rem;max-width:570px;font-size:1.08rem;line-height:1.65}
+.trust-row{display:flex;flex-wrap:wrap;gap:0.55rem;margin-top:1.25rem}
+.trust-pill{background:rgba(255,255,255,0.64);border:1px solid rgba(30,58,95,0.10);border-radius:999px;padding:0.38rem 0.75rem;font-size:0.74rem;font-weight:800;color:var(--text2)}
+.pathfinder-card{
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(24px) saturate(180%);
+  -webkit-backdrop-filter:blur(24px) saturate(180%);
+  border:1px solid rgba(255,255,255,0.86);
+  border-radius:18px;
+  padding:1.35rem;
+  box-shadow:var(--shadow-lg);
+}
+.pf-kicker{font-size:0.66rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:0.35rem}
+.pf-title{font-size:1.25rem;font-weight:900;letter-spacing:-0.3px;margin-bottom:0.25rem;color:var(--text)}
+.pf-sub{font-size:0.82rem;color:var(--muted);line-height:1.55;margin-bottom:1rem;font-weight:600}
+.pf-field{margin-bottom:0.75rem}
+.pf-label{display:block;font-size:0.66rem;font-weight:900;letter-spacing:0.09em;text-transform:uppercase;color:var(--navy);margin-bottom:0.35rem;opacity:0.72}
+.pf-input,.pf-select{
+  width:100%;
+  border:1px solid rgba(30,58,95,0.16);
+  border-radius:10px;
+  background:rgba(255,255,255,0.88);
+  color:var(--text);
+  font:inherit;
+  font-size:0.9rem;
+  padding:0.68rem 0.8rem;
+  outline:none;
+}
+.pf-input:focus,.pf-select:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(30,58,95,0.08)}
+.pf-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem}
+.pf-result{
+  display:none;
+  margin-top:1rem;
+  border-radius:14px;
+  background:rgba(235,242,250,0.72);
+  border:1px solid rgba(30,58,95,0.10);
+  padding:1rem;
+}
+.pf-result.open{display:block;animation:fadeUp 0.22s cubic-bezier(0.22,1,0.36,1)}
+.pf-result-top{display:flex;justify-content:space-between;align-items:flex-start;gap:0.75rem;margin-bottom:0.7rem}
+.pf-result-title{font-size:1rem;font-weight:900;color:var(--text);line-height:1.25}
+.pf-result-note{font-size:0.78rem;color:var(--muted);font-weight:700;margin-top:0.15rem}
+.pf-pill{font-size:0.66rem;font-weight:900;letter-spacing:0.06em;text-transform:uppercase;border-radius:999px;padding:0.25rem 0.55rem;white-space:nowrap}
+.pf-score-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0.5rem;margin:0.85rem 0}
+.pf-score{background:rgba(255,255,255,0.72);border:1px solid rgba(30,58,95,0.08);border-radius:10px;padding:0.65rem 0.7rem}
+.pf-score-label{font-size:0.58rem;font-weight:900;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.18rem}
+.pf-score-value{font-size:0.88rem;font-weight:900;color:var(--text);line-height:1.25}
+.pf-report{display:grid;gap:0.65rem;margin-top:0.65rem}
+.pf-report-card{background:rgba(255,255,255,0.7);border:1px solid rgba(30,58,95,0.08);border-radius:12px;padding:0.85rem}
+.pf-report-label{font-size:0.62rem;font-weight:900;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy);margin-bottom:0.35rem}
+.pf-report-text{font-size:0.8rem;color:var(--text2);line-height:1.5;font-weight:600}
+.pf-major-list{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.45rem}
+.pf-major-chip{font-size:0.72rem;font-weight:800;background:rgba(30,58,95,0.08);color:var(--navy);border-radius:999px;padding:0.24rem 0.55rem}
+.pf-actions{display:flex;gap:0.55rem;flex-wrap:wrap;margin-top:0.85rem}
+.pf-mini-btn{border:1px solid rgba(30,58,95,0.18);background:rgba(255,255,255,0.85);color:var(--navy);border-radius:10px;padding:0.58rem 0.8rem;font-size:0.78rem;font-weight:900;cursor:pointer;font-family:inherit;transition:all 0.18s}
+.pf-mini-btn:hover{background:#fff;transform:translateY(-1px);box-shadow:var(--shadow)}
+.pf-sources{font-size:0.68rem;color:var(--muted);line-height:1.45;font-weight:700;margin-top:0.75rem;padding-top:0.65rem;border-top:1px solid rgba(30,58,95,0.10)}
+.home-band{padding:2.75rem 2rem}
+.home-band.alt{background:rgba(255,255,255,0.24);border-top:1px solid rgba(255,255,255,0.38);border-bottom:1px solid rgba(30,58,95,0.06)}
+.how-strip{padding:1.25rem 2rem 2rem}
+.how-strip-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem}
+.how-step{background:rgba(255,255,255,0.54);border:1px solid rgba(255,255,255,0.74);border-radius:12px;padding:0.85rem 1rem;box-shadow:var(--shadow)}
+.how-step strong{display:block;font-size:0.8rem;color:var(--text);margin-bottom:0.15rem}
+.how-step span{display:block;font-size:0.74rem;color:var(--muted);line-height:1.4;font-weight:650}
+.quick-section{padding:0.75rem 2rem 2.5rem}
+.quick-inner{max-width:1120px;margin:0 auto}
+.quick-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:0.85rem}
+.quick-head h2{font-size:1rem;font-weight:900;letter-spacing:-0.2px;color:var(--text);margin:0}
+.quick-head p{font-size:0.78rem;color:var(--muted);font-weight:650;margin:0;line-height:1.4}
+.industry-preview{display:grid;grid-template-columns:repeat(4,1fr);gap:0.8rem}
+.industry-preview-card{background:rgba(255,255,255,0.58);border:1px solid rgba(255,255,255,0.76);border-radius:12px;padding:1rem;text-decoration:none;color:inherit;box-shadow:var(--shadow);transition:all 0.18s;cursor:pointer}
+.industry-preview-card:hover{background:rgba(255,255,255,0.88);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.industry-preview-card strong{display:block;font-size:0.88rem;color:var(--text);margin-bottom:0.2rem}
+.industry-preview-card span{display:block;font-size:0.74rem;color:var(--muted);line-height:1.45;font-weight:650}
+.start-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.start-card{
+  background:rgba(255,255,255,0.60);
+  backdrop-filter:var(--blur);
+  -webkit-backdrop-filter:var(--blur);
+  border:1px solid rgba(255,255,255,0.76);
+  border-radius:14px;
+  padding:1.25rem;
+  text-decoration:none;
+  color:inherit;
+  box-shadow:var(--shadow);
+  transition:all 0.2s;
+}
+.start-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md);background:rgba(255,255,255,0.88)}
+.start-icon{width:38px;height:38px;border-radius:10px;background:rgba(30,58,95,0.08);display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:0.9rem}
+.start-card h3{font-size:1rem;font-weight:900;letter-spacing:-0.2px;margin-bottom:0.35rem;color:var(--text)}
+.start-card p{font-size:0.8rem;color:var(--muted);line-height:1.55;font-weight:600;margin-bottom:0.75rem}
+.start-link{font-size:0.76rem;font-weight:900;color:var(--navy)}
+.snapshot-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:1.4rem;align-items:start}
+.snapshot-panel{
+  background:rgba(255,255,255,0.58);
+  border:1px solid rgba(255,255,255,0.76);
+  border-radius:14px;
+  padding:1.25rem;
+  box-shadow:var(--shadow);
+}
+.snapshot-list{display:grid;gap:0.75rem}
+.snapshot-item{display:grid;grid-template-columns:auto 1fr;gap:0.7rem;align-items:start}
+.snapshot-num{font-size:1.45rem;font-weight:900;color:var(--navy);letter-spacing:-1px;line-height:1}
+.snapshot-item h3{font-size:0.9rem;font-weight:900;margin-bottom:0.18rem}
+.snapshot-item p{font-size:0.78rem;color:var(--muted);line-height:1.5;font-weight:600}
+.mini-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-top:1.4rem}
+.mini-stat{background:rgba(30,58,95,0.06);border:1px solid rgba(30,58,95,0.08);border-radius:12px;padding:0.9rem;text-align:center}
+.mini-stat strong{display:block;font-size:1.25rem;color:var(--navy);font-weight:900;letter-spacing:-0.5px}
+.mini-stat span{font-size:0.68rem;color:var(--muted);line-height:1.35;font-weight:700}
+@media(max-width:860px){
+  .home-hero{padding-top:3rem}
+  .hero-shell,.snapshot-grid{grid-template-columns:1fr}
+  .hero-copy{text-align:center}
+  .hero-copy .hero-sub{margin-left:auto;margin-right:auto}
+  .trust-row,.hero-copy .hero-btns{justify-content:center}
+  .start-grid,.mini-stat-row,.how-strip-inner,.industry-preview{grid-template-columns:1fr}
+  .quick-head{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:520px){
+  .home-hero,.home-band,.quick-section{padding-left:1rem;padding-right:1rem}
+  .pf-grid{grid-template-columns:1fr}
+  .pf-score-row{grid-template-columns:1fr}
+  .hero-copy h1{letter-spacing:-1px}
+}
 /* ── LANDING GATE ── */
 .landing-gate{position:fixed;inset:0;z-index:9000;background:linear-gradient(135deg,#dde8ff 0%,#e8f4ff 30%,#d6f0ff 60%,#ddf4ef 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem;transition:opacity 0.5s cubic-bezier(0.22,1,0.36,1);overflow-y:auto}
 .landing-gate.out{opacity:0;pointer-events:none}
@@ -666,7 +825,7 @@ footer{
 <body>
 
 <!-- ── LANDING GATE ── -->
-<div class="landing-gate" id="landing-gate">
+<div class="landing-gate gone" id="landing-gate">
   <div class="gate-logo">Future-Proof · 2026</div>
   <h1 class="gate-heading">AI is changing every career.<br>Let's get you future-proofed.</h1>
   <p class="gate-sub">A research-backed guide to navigating the AI economy — tailored to where you are right now.</p>
@@ -725,15 +884,128 @@ footer{
 <div class="tab-page active" id="page-home">
 
   <!-- Hero -->
-  <div class="hero">
-    <div class="hero-eyebrow"><div class="hero-dot"></div> Updated May 2026 · Research-backed guidance</div>
-    <h1>AI is changing every career.<br><span class="grad">Understand what comes next.</span></h1>
-    <p class="hero-sub">Navigate the AI economy. Find your path.</p>
-    <div class="hero-btns">
-      <a href="#" onclick="showTab('quiz');return false;" class="btn btn-primary">Take the Career Quiz →</a>
-      <a href="#" onclick="showTab('industries');return false;" class="btn btn-outline">Explore by Industry</a>
+  <section class="home-hero">
+    <div class="hero-shell">
+      <div class="hero-copy">
+        <div class="hero-eyebrow"><div class="hero-dot"></div> Updated May 2026 · Built for students and families</div>
+        <h1>Find a career path that feels clear <span class="grad">in a changing world.</span></h1>
+        <p class="hero-sub">Type one career idea. PathFinder shows fit, how much of the work AI can do, strong majors, and the best industry page to open next.</p>
+        <div class="hero-btns">
+          <a href="#pathfinder" class="btn btn-primary">Try PathFinder →</a>
+          <a href="#" onclick="showTab('quiz');return false;" class="btn btn-outline">Take the Quiz</a>
+        </div>
+        <div class="trust-row" aria-label="Highlights">
+          <span class="trust-pill">Career fit</span>
+          <span class="trust-pill">AI risk</span>
+          <span class="trust-pill">Best majors</span>
+          <span class="trust-pill">Industry map</span>
+        </div>
+      </div>
+
+        <div class="pathfinder-card" id="pathfinder">
+        <div class="pf-kicker">PathFinder System</div>
+        <div class="pf-title">PathFinder</div>
+        <p class="pf-sub">Get a short, useful read without digging through every page.</p>
+
+        <div class="pf-field">
+          <label class="pf-label" for="pf-career">Career you are considering</label>
+          <input class="pf-input" id="pf-career" type="text" placeholder="Nurse, accountant, software engineer..." onkeydown="if(event.key==='Enter')runPathFinder()">
+        </div>
+        <div class="pf-grid">
+          <div class="pf-field">
+            <label class="pf-label" for="pf-stage">Where you are</label>
+            <select class="pf-select" id="pf-stage">
+              <option value="hs">High school</option>
+              <option value="college">College</option>
+              <option value="parent">Parent or guardian</option>
+            </select>
+          </div>
+          <div class="pf-field">
+            <label class="pf-label" for="pf-priority">Priority</label>
+            <select class="pf-select" id="pf-priority">
+              <option value="stability">Stable demand</option>
+              <option value="salary">Higher earnings</option>
+              <option value="purpose">Meaningful work</option>
+              <option value="flex">Flexible options</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="runPathFinder()" style="width:100%;justify-content:center;margin-top:0.2rem">Check This Career →</button>
+
+        <div class="pf-result" id="pf-result" aria-live="polite">
+          <div class="pf-result-top">
+            <div>
+              <div class="pf-result-title" id="pf-title">Your PathFinder plan</div>
+              <div class="pf-result-note" id="pf-note"></div>
+            </div>
+            <span class="pf-pill" id="pf-risk">Ready</span>
+          </div>
+          <div class="pf-score-row">
+            <div class="pf-score"><div class="pf-score-label">Career Fit</div><div class="pf-score-value" id="pf-fit-score">--</div></div>
+            <div class="pf-score"><div class="pf-score-label">AI Risk</div><div class="pf-score-value" id="pf-risk-score">--</div></div>
+            <div class="pf-score"><div class="pf-score-label">Industry</div><div class="pf-score-value" id="pf-industry">--</div></div>
+          </div>
+          <div class="pf-report">
+            <div class="pf-report-card">
+              <div class="pf-report-label">Career Fit</div>
+              <div class="pf-report-text" id="pf-fit"></div>
+            </div>
+            <div class="pf-report-card">
+              <div class="pf-report-label">AI Risk</div>
+              <div class="pf-report-text" id="pf-ai-risk"></div>
+            </div>
+            <div class="pf-report-card">
+              <div class="pf-report-label">Best Majors</div>
+              <div class="pf-report-text" id="pf-majors-text"></div>
+              <div class="pf-major-list" id="pf-major-list"></div>
+            </div>
+          </div>
+          <div class="pf-actions">
+            <button class="pf-mini-btn" id="pf-industry-btn" onclick="openRecommendedIndustry()">Open recommended industry →</button>
+            <button class="pf-mini-btn" onclick="showTab('getready')">Build readiness plan →</button>
+          </div>
+          <div class="pf-sources" id="pf-sources"></div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Stat Strip -->
+  <section class="stat-strip" id="stat-strip">
+    <div class="stat-strip-inner">
+      <div>
+        <div class="stat-num" data-count="92" data-suffix="M">92M</div>
+        <div class="stat-label">Jobs displaced by AI by 2030</div>
+        <div class="stat-source">WEF 2025</div>
+      </div>
+      <div>
+        <div class="stat-num" data-count="170" data-suffix="M">170M</div>
+        <div class="stat-label">New roles created by 2030</div>
+        <div class="stat-source">WEF 2025</div>
+      </div>
+      <div>
+        <div class="stat-num" data-count="19" data-suffix="%">19%</div>
+        <div class="stat-label">Of US workers have 50%+ of tasks AI-exposed</div>
+        <div class="stat-source">Eloundou et al., Science 2023</div>
+      </div>
+      <div>
+        <div class="stat-num" data-count="40" data-prefix="+">+40%</div>
+        <div class="stat-label">Nurse Practitioner growth by 2034</div>
+        <div class="stat-source">BLS 2024–2034</div>
+      </div>
+      <div>
+        <div class="stat-num" data-count="78" data-prefix="+">+78M</div>
+        <div class="stat-label">Net new jobs globally by 2030</div>
+        <div class="stat-source">WEF Future of Jobs 2025</div>
+      </div>
+      <div>
+        <div class="stat-num" data-count="4.1" data-suffix="%">4.1%</div>
+        <div class="stat-label">AI exposure in skilled trades — lowest of any sector</div>
+        <div class="stat-source">Anthropic Economic Index 2026</div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Personalized banner (shown after gate is dismissed) -->
   <div class="who-banner" id="who-banner">
@@ -747,113 +1019,23 @@ footer{
     </div>
   </div>
 
-  <!-- Stats -->
-  <div class="stat-strip reveal" id="stat-strip">
-    <div class="stat-strip-inner">
-      <div><div class="stat-num" data-count="92" data-suffix="M" data-prefix="">0M</div><div class="stat-label">Jobs displaced by AI by 2030</div><div class="stat-source">WEF 2025</div></div>
-      <div><div class="stat-num" data-count="170" data-suffix="M" data-prefix="">0M</div><div class="stat-label">New roles created by 2030</div><div class="stat-source">WEF 2025</div></div>
-      <div><div class="stat-num" data-count="19" data-suffix="%" data-prefix="">0%</div><div class="stat-label">Of US workers have 50%+ of tasks AI-exposed</div><div class="stat-source">Eloundou et al., Science 2023</div></div>
-      <div><div class="stat-num" data-count="40" data-suffix="%" data-prefix="+">0%</div><div class="stat-label">Nurse Practitioner growth by 2034</div><div class="stat-source">BLS 2024–2034</div></div>
-      <div><div class="stat-num" data-count="78" data-suffix="M" data-prefix="+">0M</div><div class="stat-label">Net new jobs globally by 2030</div><div class="stat-source">WEF Future of Jobs 2025</div></div>
-      <div><div class="stat-num" data-count="4.1" data-suffix="%" data-prefix="" data-decimals="1">0%</div><div class="stat-label">AI exposure in skilled trades — lowest of any sector</div><div class="stat-source">Anthropic Economic Index 2026</div></div>
-    </div>
-  </div>
-
-  <!-- Key Insight -->
-  <div class="reveal" style="padding:3rem 2rem 1rem">
-    <div style="max-width:1100px;margin:0 auto">
-      <div style="background:rgba(255,255,255,0.48);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,0.65);border-radius:20px;padding:2.75rem 3rem;text-align:center;box-shadow:0 8px 32px rgba(30,58,95,0.09)">
-        <div style="font-size:0.68rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:1.25rem;opacity:0.75">The Key Insight</div>
-        <p style="font-size:clamp(1.1rem,2.2vw,1.45rem);font-weight:700;line-height:1.5;color:var(--text);max-width:700px;margin:0 auto 1rem;letter-spacing:-0.3px">The skill that matters isn't picking the right career — it's learning to <em>use AI as a tool</em> rather than fear it as a threat.</p>
-        <p style="font-size:0.92rem;color:var(--muted);font-weight:500;max-width:520px;margin:0 auto">The people adapting best aren't more talented. They're more willing to experiment.</p>
+  <section class="quick-section reveal">
+    <div class="quick-inner">
+      <div class="quick-head">
+        <div>
+          <div class="section-label">Browse By Industry</div>
+          <h2>Not sure what to search?</h2>
+        </div>
+        <p>Start with the kind of work that sounds closest.</p>
+      </div>
+      <div class="industry-preview">
+        <button class="industry-preview-card" onclick="openIndustryFromHome('healthcare')"><strong>People & Care</strong><span>Healthcare, therapy, counseling, education, social work.</span></button>
+        <button class="industry-preview-card" onclick="openIndustryFromHome('tech')"><strong>Tech & Data</strong><span>Software, AI, cybersecurity, analytics, product work.</span></button>
+        <button class="industry-preview-card" onclick="openIndustryFromHome('finance')"><strong>Business & Law</strong><span>Finance, legal work, consulting, policy, operations.</span></button>
+        <button class="industry-preview-card" onclick="openIndustryFromHome('arts')"><strong>Creative & Hands-On</strong><span>Design, media, photography, trades, engineering.</span></button>
       </div>
     </div>
-  </div>
-
-  <!-- Job Risk Checker -->
-  <div class="reveal" style="padding:0.5rem 2rem 3rem">
-    <div style="max-width:680px;margin:0 auto">
-      <div style="background:rgba(255,255,255,0.55);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,0.7);border-radius:20px;padding:2rem 2.25rem;box-shadow:0 4px 20px rgba(30,58,95,0.08)">
-        <div style="font-size:0.68rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;opacity:0.7">Quick Check</div>
-        <div style="font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:1.1rem">Is this job safe from AI?</div>
-        <div style="display:flex;gap:0.6rem;flex-wrap:wrap">
-          <input id="job-check-input" type="text" placeholder="Type any job title — e.g. Graphic Designer, Nurse, Accountant…"
-            style="flex:1;min-width:220px;border:1px solid rgba(30,58,95,0.18);border-radius:10px;padding:0.65rem 1rem;font-size:0.9rem;background:rgba(255,255,255,0.85);color:var(--text);outline:none;font-family:inherit"
-            onkeydown="if(event.key==='Enter')checkJobRisk()"
-          />
-          <button onclick="checkJobRisk()" style="background:linear-gradient(135deg,#1E3A5F,#0c5a8a);color:#fff;border:none;border-radius:10px;padding:0.65rem 1.4rem;font-size:0.9rem;font-weight:700;cursor:pointer;white-space:nowrap;font-family:inherit">Check →</button>
-        </div>
-        <div id="job-risk-result" style="display:none;margin-top:1.1rem;padding:1rem 1.2rem;background:rgba(255,255,255,0.75);border-radius:12px;border:1px solid rgba(30,58,95,0.1)">
-          <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem">
-            <span id="jrr-badge" style="font-size:0.72rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;padding:0.28rem 0.75rem;border-radius:20px"></span>
-            <span id="jrr-title" style="font-size:0.95rem;font-weight:700;color:var(--text)"></span>
-          </div>
-          <p id="jrr-line1" style="font-size:0.88rem;color:var(--text);margin:0 0 0.35rem;line-height:1.55"></p>
-          <p id="jrr-line2" style="font-size:0.85rem;color:var(--muted);margin:0;line-height:1.5"></p>
-        </div>
-        <div style="margin-top:0.75rem;font-size:0.75rem;color:var(--muted);opacity:0.8">Try: Accountant · Nurse · Software Engineer · Cashier · Graphic Designer · Teacher · Paralegal</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Key Headlines -->
-  <div class="reveal" style="background:transparent;border-bottom:1px solid rgba(30,58,95,0.08);padding:3.5rem 2rem">
-    <div class="wrap">
-      <div class="section-label">What the Research Shows</div>
-      <h2 class="section-title" style="margin-bottom:1.75rem">What's Actually Happening Right Now</h2>
-      <div class="headlines-grid">
-        <div class="hl-card">
-          <div class="hl-source">TechRepublic · April 2026</div>
-          <h3><mark>16,000 jobs</mark> displaced per month in the US — Gen Z hit the hardest</h3>
-          <p>Entry-level data entry, admin, and help desk roles hit hardest. Workers aged 22–25 most affected.</p>
-        </div>
-        <div class="hl-card">
-          <div class="hl-source">U.S. News · April 2026</div>
-          <h3>Students searching for <mark>"AI-proof" majors</mark> — but experts say there aren't any</h3>
-          <p>No major is safe — but any major can work. AI fluency and adaptability matter more than the field.</p>
-        </div>
-        <div class="hl-card">
-          <div class="hl-source">Anthropic Economic Index · March 2026</div>
-          <h3>AI handles the <mark>hardest parts</mark> of jobs first — not the easiest</h3>
-          <p>From 2M AI conversations: AI takes on the hardest parts first, not the easiest — reshaping what expertise means.</p>
-        </div>
-        <div class="hl-card">
-          <div class="hl-source">CNBC · April 2026</div>
-          <h3><mark>20,000 job cuts</mark> at Meta &amp; Microsoft tied directly to AI restructuring</h3>
-          <p>92,000+ tech workers laid off in 2026. Executives cite AI efficiency — not a slowdown.</p>
-        </div>
-        <div class="hl-card">
-          <div class="hl-source">Bloomberg Law · May 2026</div>
-          <h3>California becomes <mark>first state</mark> to mandate AI workforce displacement tracking</h3>
-          <p>Newsom directed agencies to build real-time dashboards tracking AI-driven job losses by sector.</p>
-        </div>
-        <div class="hl-card">
-          <div class="hl-source">IEEE Spectrum · March 2026</div>
-          <h3>Entry-level software engineer hiring <mark>falls 25%</mark> — but total jobs still grow</h3>
-          <p>Junior dev roles down ~20% since 2022 — but overall software jobs still grow 17% through 2033. The bar is higher, not gone.</p>
-        </div>
-      </div>
-
-      <!-- Videos -->
-      <div style="margin-top:2.5rem">
-        <div class="section-label" style="margin-bottom:0.75rem">Watch · Key Voices on AI &amp; Work</div>
-        <div class="video-row">
-          <a class="video-card" href="https://www.youtube.com/watch?v=n1E9IZfvGMA" target="_blank" rel="noopener">
-            <div class="video-thumb"><img src="https://img.youtube.com/vi/n1E9IZfvGMA/hqdefault.jpg" alt=""><div class="video-play"></div><span class="video-tag">Anthropic CEO · Feb 2026</span></div>
-            <div class="video-info"><div class="video-title">Dario Amodei: "We Are Near the End of the Exponential"</div><div class="video-meta">Anthropic CEO on what comes next for AI and jobs</div></div>
-          </a>
-          <a class="video-card" href="https://www.youtube.com/watch?v=KpOcUrPdx-4" target="_blank" rel="noopener">
-            <div class="video-thumb"><img src="https://img.youtube.com/vi/KpOcUrPdx-4/hqdefault.jpg" alt=""><div class="video-play"></div><span class="video-tag">60 Minutes · Dec 2025</span></div>
-            <div class="video-info"><div class="video-title">Artificial Intelligence in 2025 — Full 60 Minutes Report</div><div class="video-meta">CBS · Anderson Cooper · Anthropic, OpenAI, the risks</div></div>
-          </a>
-          <a class="video-card" href="https://www.youtube.com/watch?v=fP5YdyjTfG0" target="_blank" rel="noopener">
-            <div class="video-thumb"><img src="https://img.youtube.com/vi/fP5YdyjTfG0/hqdefault.jpg" alt=""><div class="video-play"></div><span class="video-tag">U.S. Senate · May 2023</span></div>
-            <div class="video-info"><div class="video-title">Sam Altman Testifies Before Congress on AI</div><div class="video-meta">OpenAI CEO on AI risks, jobs, and regulation</div></div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 </div><!-- /page-home -->
 
 <!-- ════════════════════════════════════════
@@ -1228,6 +1410,7 @@ footer{
     <button class="ind-tab" onclick="switchInd(this,'retail')">🛍️ Retail & E-Commerce</button>
     <button class="ind-tab" onclick="switchInd(this,'transportation')">🚚 Transportation & Logistics</button>
     <button class="ind-tab" onclick="switchInd(this,'realestate')">🏠 Real Estate</button>
+    <button class="ind-tab" onclick="switchInd(this,'arts')">🎨 Arts & Creative</button>
   </div>
 
   <!-- FINANCE -->
@@ -1454,6 +1637,20 @@ footer{
     <div id="ind-firms-realestate" class="ind-firms"></div>
   </div>
 
+  <!-- ARTS & CREATIVE -->
+  <div class="ind-panel" id="ind-arts">
+    <div class="ind-header"><div class="ind-icon">🎨</div><div><h3>Arts, Photography &amp; Creative Media</h3><p>Photography, film, music, illustration, animation, design, performance</p></div><span class="badge badge-amber">Transforming</span></div>
+    <div class="ind-grid">
+      <div class="ind-box"><h4 class="going">🔴 Roles Shrinking</h4><ul><li>Stock photo illustrators (AI-generated images)</li><li>Basic commercial photographers (product/catalog)</li><li>Entry-level graphic designers (template work)</li><li>Background music composers (AI music tools)</li><li>Standard video editors (routine cuts)</li></ul></div>
+      <div class="ind-box"><h4 class="safe">🟢 Safe &amp; Growing</h4><ul><li>Wedding &amp; portrait photographers</li><li>Photojournalists &amp; documentary photographers</li><li>Creative directors with a distinct voice</li><li>Musicians with a live performance career</li><li>Animators &amp; concept artists (gaming, film)</li><li>Architects &amp; interior designers</li></ul></div>
+      <div class="ind-box"><h4 class="emerging">🔵 Emerging Roles</h4><ul><li>AI art director (prompting + curation)</li><li>Synthetic media producer</li><li>XR &amp; immersive experience designer</li><li>AI music supervisor</li><li>Digital rights &amp; creative IP specialist</li></ul></div>
+      <div class="ind-box"><h4 class="majors">🎯 Strong Degree Paths</h4><ul><li>Photography / Film Production (portfolio-first)</li><li>Fine Arts + Digital Media</li><li>Graphic Design + UX</li><li>Music Production + Business</li><li>Animation (gaming, VFX, streaming)</li></ul>
+        <div class="ind-insight"><strong>Key finding:</strong> AI image generators have compressed the stock photo market by 50%+, but human photographers who specialize in weddings, editorial, and commercial brand work — where authenticity and client relationships matter — report strong demand. The Anthropic Economic Index (2026) found that creative roles requiring personal style and real-world presence are among the most AI-resilient.<div class="ind-source">Anthropic Economic Index 2026 · Getty Images Annual Report 2025 · BLS Occupational Outlook 2024–2034</div></div>
+      </div>
+    </div>
+    <div id="ind-firms-arts" class="ind-firms"></div>
+  </div>
+
 </div><!-- /wrap -->
 </div><!-- /page-industries -->
 
@@ -1592,7 +1789,7 @@ footer{
     </div>
     <div class="toolkit-category" style="color:var(--cyan)">Career Exploration</div>
     <div class="toolkit-grid">
-      <a class="toolkit-card" href="https://www.onetonline.org" target="_blank" rel="noopener"><div class="toolkit-top"><span class="toolkit-name">O*NET Online</span><span class="cost cost-free">Free</span></div><div class="toolkit-desc">Official US career database. Search any job to see its AI exposure risk, salary data, and growth projections.</div></a>
+      <a class="toolkit-card" href="https://www.onetonline.org" target="_blank" rel="noopener"><div class="toolkit-top"><span class="toolkit-name">O*NET Online</span><span class="cost cost-free">Free</span></div><div class="toolkit-desc">Official US career database. Search any job to see how much of the work AI can do, salary data, and growth projections.</div></a>
       <a class="toolkit-card" href="https://www.bls.gov/ooh/" target="_blank" rel="noopener"><div class="toolkit-top"><span class="toolkit-name">BLS Occupational Outlook</span><span class="cost cost-free">Free</span></div><div class="toolkit-desc">The most reliable source for which fields are growing vs. shrinking — with actual data, not guesses.</div></a>
       <a class="toolkit-card" href="https://collegescorecard.ed.gov" target="_blank" rel="noopener"><div class="toolkit-top"><span class="toolkit-name">College Scorecard</span><span class="cost cost-free">Free</span></div><div class="toolkit-desc">Official US data on graduation rates, average earnings after graduation, and student debt by school and major.</div></a>
     </div>
@@ -1654,14 +1851,14 @@ footer{
     <div class="toolkit-grid">
       <a class="toolkit-card" href="https://joinhandshake.com" target="_blank" rel="noopener"><div class="toolkit-top"><span class="toolkit-name">Handshake</span><span class="cost cost-free">Free</span></div><div class="toolkit-desc">The most relevant job board for those in college — recruiters at your school post here first.</div></a>
       <a class="toolkit-card" href="https://www.linkedin.com" target="_blank" rel="noopener"><div class="toolkit-top"><span class="toolkit-name">LinkedIn</span><span class="cost cost-free">Free</span></div><div class="toolkit-desc">Set up your profile now. Add every certificate as you earn it. Signal AI fluency clearly in your headline.</div></a>
-      <a class="toolkit-card" href="https://www.onetonline.org" target="_blank" rel="noopener"><div class="toolkit-top"><span class="toolkit-name">O*NET Online</span><span class="cost cost-free">Free</span></div><div class="toolkit-desc">Look up any role to see its AI exposure risk, required skills, and 10-year growth outlook.</div></a>
+      <a class="toolkit-card" href="https://www.onetonline.org" target="_blank" rel="noopener"><div class="toolkit-top"><span class="toolkit-name">O*NET Online</span><span class="cost cost-free">Free</span></div><div class="toolkit-desc">Look up any role to see how much of the work AI can do, required skills, and 10-year growth outlook.</div></a>
     </div>
   </div><!-- /aud-college -->
 
 </div><!-- /wrap -->
 </div><!-- /page-getready -->
 
-<footer>Future-Proof · Research as of May 2026 · Sources: Anthropic, WEF, Goldman Sachs, McKinsey, BLS, ILO · For educational purposes</footer>
+<footer>Future-Proof · Research as of June 2026 · Sources: HBS/Srinivasan 2026, Anthropic Economic Index, WEF Future of Jobs 2025, Eloundou et al. (Science 2023), Goldman Sachs, McKinsey, BLS, ILO · For educational purposes</footer>
 
 <script>
 // ── HAMBURGER ──
@@ -1698,6 +1895,103 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // ── QUIZ ──
 /* ── AI Interest Explorer ── */
+const localGuidanceProfiles = {
+  health: {
+    title: 'Healthcare, Therapy, or Human Support',
+    fit: 'You seem drawn to work where trust, care, and direct human impact matter.',
+    roles: ['Nurse or nurse practitioner', 'Physician assistant', 'Physical or occupational therapist', 'Clinical social worker', 'Speech-language pathologist'],
+    majors: ['Nursing', 'Biology or Health Sciences', 'Psychology', 'Public Health', 'Social Work'],
+    edge: 'Clinical judgment, patient communication, and hands-on care are hard to automate. AI can help with notes, diagnostics, and planning, but people still need a trusted human in the room.',
+    action: 'Shadow or interview one clinician or therapist and ask what a normal week actually feels like.'
+  },
+  tech: {
+    title: 'Technology, Data, or AI-Enabled Product Work',
+    fit: 'You seem interested in systems, logic, building, or solving problems with tools.',
+    roles: ['Software engineer', 'Data analyst or data scientist', 'Cybersecurity analyst', 'AI product manager', 'Machine learning engineer'],
+    majors: ['Computer Science', 'Data Science', 'Information Systems', 'Cybersecurity', 'Cognitive Science plus CS'],
+    edge: 'AI raises the bar for junior work, but it also rewards people who can design systems, debug, explain tradeoffs, and build real projects.',
+    action: 'Build one small project you can show publicly, even if it is simple. A finished project beats a vague interest.'
+  },
+  finance: {
+    title: 'Business, Finance, Analytics, or Strategy',
+    fit: 'You seem pulled toward decisions, numbers, markets, operations, or practical problem-solving.',
+    roles: ['Financial analyst', 'Risk analyst', 'Business analyst', 'Product operations associate', 'Wealth advisor'],
+    majors: ['Finance', 'Economics', 'Accounting plus analytics', 'Business Analytics', 'Statistics'],
+    edge: 'Routine spreadsheet work is vulnerable. The valuable layer is judgment: asking the right question, checking assumptions, and explaining what the numbers mean.',
+    action: 'Pick one company and write a one-page memo on how it makes money, what risks it faces, and how AI could change it.'
+  },
+  law: {
+    title: 'Law, Policy, Advocacy, or Governance',
+    fit: 'You seem interested in fairness, argument, systems, research, or helping people navigate complex rules.',
+    roles: ['Attorney', 'Policy analyst', 'Compliance analyst', 'Legal operations specialist', 'AI governance associate'],
+    majors: ['Political Science', 'Public Policy', 'Economics', 'Philosophy', 'History or English with strong writing'],
+    edge: 'AI can summarize and draft, but legal and policy work still depends on judgment, persuasion, context, and accountability.',
+    action: 'Read one real case, policy brief, or public comment and summarize the argument in plain English.'
+  },
+  creative: {
+    title: 'Design, Media, Writing, or Communication',
+    fit: 'You seem motivated by expression, storytelling, design, persuasion, or making ideas land with people.',
+    roles: ['UX researcher', 'Interaction designer', 'Brand strategist', 'Data journalist', 'Content strategist'],
+    majors: ['UX or HCI', 'Journalism plus data', 'Design', 'Strategic Communications', 'Marketing Analytics'],
+    edge: 'Generic content is easy to automate. Distinctive taste, research, audience insight, and a strong portfolio are the durable parts.',
+    action: 'Create one portfolio piece that shows your thinking process, not just the final product.'
+  },
+  engineering: {
+    title: 'Engineering, Skilled Trades, or Physical Systems',
+    fit: 'You seem interested in building, fixing, improving, or understanding how real-world systems work.',
+    roles: ['Electrical engineer', 'Civil engineer', 'Robotics technician', 'Electrician', 'HVAC or clean energy technician'],
+    majors: ['Electrical Engineering', 'Mechanical Engineering', 'Civil Engineering', 'Industrial Technology', 'Paid apprenticeship'],
+    edge: 'Physical systems, licensing, safety, and site-specific troubleshooting are highly resilient. AI helps with planning, but the real world still has to be built and maintained.',
+    action: 'Visit a shop, lab, union hall, makerspace, or engineering club and ask how beginners get started.'
+  },
+  science: {
+    title: 'Science, Research, Environment, or Biotech',
+    fit: 'You seem curious about discovery, evidence, nature, health, data, or unanswered questions.',
+    roles: ['Bioinformatics scientist', 'Research data analyst', 'Environmental scientist', 'Clinical research coordinator', 'Epidemiologist'],
+    majors: ['Biology plus Bioinformatics', 'Environmental Science plus Data', 'Biochemistry', 'Public Health', 'Statistics'],
+    edge: 'AI accelerates research, but humans still choose the question, design the study, judge quality, and explain why the result matters.',
+    action: 'Find one public dataset or research article in the field and write down three questions it makes you want to answer.'
+  }
+};
+
+const localGuidanceKeywords = {
+  health: ['help','people','patient','care','medicine','doctor','nurse','therapy','therapist','mental health','psychology','biology','health','kids','support'],
+  tech: ['code','coding','software','computer','ai','data','robot','app','build','programming','cyber','technology','systems','logic','math'],
+  finance: ['business','money','finance','invest','market','strategy','startup','numbers','accounting','sales','economics','management','operations'],
+  law: ['law','policy','politics','government','justice','fair','debate','argue','rights','advocacy','research','history','ethics'],
+  creative: ['write','writing','design','art','music','film','video','story','creative','brand','media','journalism','social media','communicate'],
+  engineering: ['engineer','engineering','build','fix','hands','mechanical','electrical','construction','trade','car','machine','tools','architecture'],
+  science: ['science','research','lab','environment','climate','chemistry','physics','biology','experiment','discover','space','nature','genetics']
+};
+
+function buildLocalCareerGuidance(input) {
+  const text = input.toLowerCase();
+  const scored = Object.entries(localGuidanceKeywords).map(([key, words]) => {
+    const score = words.reduce((sum, word) => sum + (text.includes(word) ? 1 : 0), 0);
+    return { key, score };
+  }).sort((a,b) => b.score - a.score);
+  const topKey = scored[0].score > 0 ? scored[0].key : 'tech';
+  const secondKey = scored[1] && scored[1].score > 0 ? scored[1].key : null;
+  const p = localGuidanceProfiles[topKey];
+  const secondary = secondKey ? localGuidanceProfiles[secondKey] : null;
+  const blended = secondary ? `A secondary direction worth exploring is **${secondary.title}**, especially if that part of your interests keeps showing up.` : 'If this does not feel quite right, take the structured quiz below. It is better for broad exploration.';
+
+  return `### ${p.title}
+
+${p.fit}
+
+### Roles to Explore First
+- ${p.roles.join('\n- ')}
+
+### Strong Study Paths
+- ${p.majors.join('\n- ')}
+
+### AI Reality Check
+${p.edge}
+
+${blended}`;
+}
+
 async function launchAIExplorer() {
   const input = document.getElementById('interest-input').value.trim();
   const errorEl = document.getElementById('ie-error');
@@ -1717,20 +2011,9 @@ async function launchAIExplorer() {
   window.scrollTo({ top: document.getElementById('ie-loading').offsetTop - 80, behavior: 'smooth' });
 
   try {
-    const response = await fetch('/api/career-guidance', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ interests: input }),
-    });
-
-    const data = await response.json();
-
-    if (!response.ok) {
-      throw new Error(data.error || 'Something went wrong.');
-    }
-
-    // Render result
-    document.getElementById('ie-result-content').innerHTML = formatMarkdown(data.result);
+    const localResult = buildLocalCareerGuidance(input);
+    await new Promise(resolve => setTimeout(resolve, 350));
+    document.getElementById('ie-result-content').innerHTML = formatMarkdown(localResult);
     document.getElementById('ie-loading').style.display = 'none';
     document.getElementById('ie-result').style.display = 'block';
     document.getElementById('ie-result').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -2442,7 +2725,7 @@ const audienceProfiles = {
     actions: [
       { label: '🧭 Take the career quiz', fn: "showTab('quiz')" },
       { label: '🏭 Explore growing industries', fn: "showTab('industries')" },
-      { label: '🔍 Check a job\'s safety', fn: "document.getElementById('job-check-input').focus();document.getElementById('job-check-input').scrollIntoView({behavior:'smooth'})" },
+      { label: '🔍 Try PathFinder', fn: "document.getElementById('pathfinder').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('pf-career').focus(),450)" },
     ]
   },
   college: {
@@ -2451,7 +2734,7 @@ const audienceProfiles = {
     actions: [
       { label: '🧭 Find your strongest fit', fn: "showTab('quiz')" },
       { label: '🏭 See what\'s hiring', fn: "showTab('industries')" },
-      { label: '🏢 Research employers', fn: "showTab('companies')" },
+      { label: '🧰 Build a readiness plan', fn: "showTab('getready')" },
     ]
   },
   parent: {
@@ -2459,8 +2742,8 @@ const audienceProfiles = {
     msg: "The job market your child will graduate into looks very different from the one you entered. Some fields are growing fast, some are quietly contracting, and AI fluency is becoming the differentiator across almost everything. The industries tab gives you an honest picture of what's actually happening in each sector.",
     actions: [
       { label: '🏭 What\'s growing vs. shrinking', fn: "showTab('industries')" },
-      { label: '🔍 Test any career for AI risk', fn: "document.getElementById('job-check-input').focus();document.getElementById('job-check-input').scrollIntoView({behavior:'smooth'})" },
-      { label: '📰 Read latest research', fn: "document.querySelector('.headlines-grid').scrollIntoView({behavior:'smooth'})" },
+      { label: '🔍 Try PathFinder', fn: "document.getElementById('pathfinder').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('pf-career').focus(),450)" },
+      { label: '📰 See employer trends', fn: "showTab('companies')" },
     ]
   }
 };
@@ -2505,26 +2788,29 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // ── JOB RISK CHECKER ──
+// Sources: HBS/Srinivasan 2026 (automation vs augmentation), Anthropic Economic Index 2026,
+// WEF Future of Jobs 2025, BLS 2024–2034, Eloundou et al. Science 2023, Goldman Sachs 2023
+// HBS model: automation-prone (structured/repetitive) → postings -13%; augmentation-prone (analytical/creative/technical) → demand +20%
 const jobRiskDB = [
-  // HIGH RISK
-  {k:['data entry','data entry clerk','typist'],risk:'high',label:'High displacement risk',line1:"Data entry is being automated at scale — LLMs and OCR tools handle document processing faster and more accurately than humans.",line2:"Pivot toward data analysis or database management, where judgment about what the numbers mean still requires a person."},
-  {k:['cashier','checkout','retail cashier'],risk:'high',label:'High displacement risk',line1:"Self-checkout and automated payment systems are displacing cashier roles across retail and fast food.",line2:"Customer experience leadership, loss prevention, and retail operations management have much stronger long-term outlooks."},
-  {k:['telemarketer','cold caller','outbound sales rep'],risk:'high',label:'High displacement risk',line1:"AI voice agents and automated outreach tools are replacing outbound calling at scale — this is one of the fastest-automating roles.",line2:"Inbound enterprise sales, account management, and relationship-based selling are far more durable alternatives."},
+  // HIGH RISK — AUTOMATION-PRONE (HBS: structured/repetitive tasks)
+  {k:['data entry','data entry clerk','typist'],risk:'high',label:'Automation-prone — High Risk',line1:"Classified as automation-prone by HBS research (Srinivasan 2026): structured, repetitive data processing is exactly what LLMs replace most efficiently. Job postings in this category fell 13% after ChatGPT launched.",line2:"Pivot toward data analysis or database management — roles where judgment about what the numbers mean still requires a person."},
+  {k:['cashier','checkout','retail cashier'],risk:'high',label:'Automation-prone — High Risk',line1:"Self-checkout and automated payment systems have already displaced cashier roles significantly. WEF (2025) projects continued decline through 2030 as retail automation scales.",line2:"Customer experience leadership, loss prevention, and retail operations management have much stronger long-term outlooks."},
+  {k:['telemarketer','cold caller','outbound sales rep'],risk:'high',label:'Automation-prone — High Risk',line1:"AI voice agents and automated outreach tools are replacing outbound calling at scale. Eloundou et al. (Science 2023) rates this among the highest LLM-exposure occupations.",line2:"Inbound enterprise sales, account management, and relationship-based selling are far more durable alternatives."},
   {k:['travel agent','travel consultant','booking agent'],risk:'high',label:'High displacement risk',line1:"AI planning tools and direct-booking platforms have already compressed this role significantly.",line2:"Luxury travel concierge and corporate travel management roles, which involve complex logistics and trusted relationships, are more resilient."},
   {k:['proofreader','copy editor','transcriptionist','transcriber'],risk:'high',label:'High displacement risk',line1:"LLMs handle proofreading, transcription, and basic copyediting tasks with high reliability at very low cost.",line2:"Senior editing roles requiring editorial judgment, audience understanding, and voice consistency remain human — for now."},
   {k:['bank teller','teller','bank clerk'],risk:'high',label:'High displacement risk',line1:"Digital banking and ATM networks have already reduced teller headcount significantly over the past decade, and AI is accelerating this.",line2:"Financial advising, loan origination, and commercial banking roles — where trust and complexity are central — are growing."},
   {k:['insurance claims adjuster','claims processor','claims adjuster'],risk:'high',label:'High displacement risk',line1:"AI systems can now process straightforward insurance claims faster and with fewer errors than human adjusters.",line2:"Complex claims, fraud investigation, and high-value commercial insurance underwriting require human expertise that AI can't replicate yet."},
   {k:['mail carrier','postal worker','letter carrier'],risk:'medium',label:'Medium displacement risk',line1:"Physical delivery is being reshaped by autonomous vehicles and drone delivery pilots, though full automation is still years away.",line2:"Logistics operations, supply chain coordination, and last-mile management roles are growing alongside automation."},
   // MEDIUM RISK
-  {k:['accountant','bookkeeper','accounting'],risk:'medium',label:'Medium displacement risk',line1:"Routine bookkeeping and tax preparation are increasingly automated, but complex financial analysis and advisory work remains human-driven.",line2:"CPAs who specialize in business strategy, M&A, or forensic accounting — rather than just number crunching — are in strong demand."},
-  {k:['paralegal','legal assistant'],risk:'medium',label:'Medium displacement risk',line1:"AI tools are automating document review, contract analysis, and legal research — but tech-fluent paralegals who guide AI tools are actually in demand (1.9% unemployment).",line2:"Paralegals with AI workflow skills and litigation support experience are being hired faster, not slower, than their non-AI counterparts."},
-  {k:['graphic designer','graphic design'],risk:'medium',label:'Medium displacement risk',line1:"AI image generation handles many commodity design tasks, but creative direction, brand systems thinking, and original concept development remain distinctly human.",line2:"Designers who combine strategic brand thinking with AI tools for execution are outcompeting both traditional designers and AI alone."},
-  {k:['journalist','reporter','news writer'],risk:'medium',label:'Medium displacement risk',line1:"AI handles routine news summarization well, but investigative journalism, original sourcing, and narrative non-fiction require human relationships and judgment.",line2:"Data journalists, investigative reporters, and documentary journalists who use AI for research but bring original sources are in solid demand."},
-  {k:['marketing','marketer','marketing specialist','digital marketer'],risk:'medium',label:'Medium displacement risk',line1:"AI automates content generation, A/B testing, and ad targeting — displacing generic marketing roles while increasing demand for strategic ones.",line2:"Brand strategists, CMOs, and marketing leaders who can interpret data and set direction are growing. AI execution is a tool, not a replacement."},
-  {k:['project manager','project management','program manager'],risk:'medium',label:'Medium displacement risk',line1:"AI is automating scheduling, status tracking, and routine updates — but coordinating complex human teams still requires human judgment and relationship skills.",line2:"PMP-certified project managers in tech, construction, or healthcare with domain expertise remain in strong demand."},
-  {k:['hr','human resources','recruiter','talent acquisition'],risk:'medium',label:'Medium displacement risk',line1:"AI handles resume screening and scheduling efficiently, reducing the need for administrative HR roles, but people strategy requires humans.",line2:"HR business partners, organizational psychologists, and DEI specialists who work at the strategic level are in growing demand."},
-  {k:['financial analyst','finance analyst','analyst'],risk:'medium',label:'Medium displacement risk',line1:"AI handles quantitative screening and financial modeling templates well, but complex judgment — sector analysis, valuation debates, investment thesis development — remains human.",line2:"Analysts who combine domain expertise with Python or financial modeling skills are significantly more competitive than peers without those skills."},
-  {k:['writer','content writer','copywriter','blogger'],risk:'medium',label:'Medium displacement risk',line1:"AI handles commodity content well, but brand voice, editorial judgment, and original research-backed writing command premium rates that AI-generated content doesn't.",line2:"Writers who specialize in investigative or deeply researched content, or who direct AI-generated drafts with a strong editorial voice, are maintaining their value."},
+  {k:['accountant','bookkeeper','accounting'],risk:'medium',label:'Partially augmented — Medium Risk',line1:"HBS research (Srinivasan 2026): routine bookkeeping is automation-prone, but financial analysis and advisory work is augmentation-prone — demand actually grew 20% post-ChatGPT for judgment-heavy finance roles.",line2:"CPAs who specialize in business strategy, M&A, or forensic accounting are in strong demand. The BLS projects accountants with data analytics skills to outpace the field."},
+  {k:['paralegal','legal assistant'],risk:'medium',label:'Partially augmented — Medium Risk',line1:"AI automates document review and legal research — but Anthropic Economic Index (2026) finds tech-fluent paralegals who guide AI tools actually face growing demand, with 1.9% unemployment in the field.",line2:"Paralegals with AI workflow skills and litigation support experience are being hired faster, not slower, than their non-AI counterparts."},
+  {k:['graphic designer','graphic design'],risk:'medium',label:'Partially augmented — Medium Risk',line1:"HBS model classifies design as augmentation-prone: AI handles commodity output, but creative direction, brand systems thinking, and original concept work are tasks AI enhances rather than replaces.",line2:"Designers who combine strategic brand thinking with AI tools for execution are outcompeting both traditional designers and AI alone. Goldman Sachs (2023) ranks design above average for AI resilience."},
+  {k:['journalist','reporter','news writer'],risk:'medium',label:'Partially augmented — Medium Risk',line1:"AI handles routine summarization, but investigative journalism, original sourcing, and narrative non-fiction require human relationships and judgment — tasks HBS classifies as augmentation-prone.",line2:"Data journalists and investigative reporters who use AI for research but bring original sources are in solid demand. ILO (2025) projects this segment to grow."},
+  {k:['marketing','marketer','marketing specialist','digital marketer'],risk:'medium',label:'Partially augmented — Medium Risk',line1:"HBS (Srinivasan 2026): generic marketing content is automation-prone (postings down 13%), but strategic marketing roles are augmentation-prone (demand up 20%). The middle layer is being eliminated.",line2:"Brand strategists, CMOs, and marketing leaders who can interpret data and set direction are growing. AI execution is a tool, not a replacement."},
+  {k:['project manager','project management','program manager'],risk:'medium',label:'Partially augmented — Medium Risk',line1:"AI automates scheduling, status tracking, and routine updates — but human team coordination, stakeholder management, and decision-making under uncertainty are classified as augmentation-prone by HBS.",line2:"PMP-certified project managers in tech, construction, or healthcare with domain expertise remain in strong demand through 2034 (BLS)."},
+  {k:['hr','human resources','recruiter','talent acquisition'],risk:'medium',label:'Partially augmented — Medium Risk',line1:"Resume screening and scheduling are automation-prone (HBS), but people strategy, organizational design, and culture work are augmentation-prone — demand for strategic HR grew post-ChatGPT.",line2:"HR business partners, organizational psychologists, and workforce analytics specialists working at the strategic level are in growing demand."},
+  {k:['financial analyst','finance analyst','analyst'],risk:'medium',label:'AI-augmented — Strong Outlook',line1:"HBS names financial analysts as a prime example of augmentation-prone roles: AI processes market data faster, but investment judgment, sector analysis, and client relationships remain human. Demand grew 20% in this category.",line2:"Analysts who combine domain expertise with Python or financial modeling skills are significantly more competitive. Goldman Sachs (2023) projects analyst roles to grow despite AI adoption."},
+  {k:['writer','content writer','copywriter','blogger'],risk:'medium',label:'Partially augmented — Medium Risk',line1:"Commodity content is automation-prone (HBS: postings fell 13%). But brand voice, editorial judgment, and original research-backed writing are augmentation-prone — AI makes good writers more productive, not redundant.",line2:"Writers who specialize in investigative or deeply researched content, or who direct AI-generated drafts with a strong editorial voice, command premium rates AI-generated content can't match."},
   {k:['teacher','educator','instructor'],risk:'low',label:'Low displacement risk',line1:"Human mentorship, classroom management, and the ability to build authentic relationships with students are deeply hard to automate.",line2:"Teachers who develop AI literacy and integrate AI tools into their curriculum are actually increasing their value — schools are actively hiring for this."},
   // LOW RISK
   {k:['nurse','registered nurse','rn','nursing'],risk:'low',label:'Low displacement risk',line1:"Direct patient care, clinical assessment, and the human connection nurses provide are among the most automation-resistant skills in the economy.",line2:"BLS projects nurse practitioner growth at +40% through 2034 — one of the fastest-growing and highest-demand healthcare careers available."},
@@ -2548,8 +2834,30 @@ const jobRiskDB = [
   {k:['product manager','pm','product owner'],risk:'low',label:'Low displacement risk',line1:"Product management is about translating user needs and business strategy into roadmaps through human judgment and cross-functional collaboration.",line2:"AI product management is now its own specialization — PMs who understand how to define, evaluate, and ship AI features are in very high demand."},
   {k:['chef','cook','culinary'],risk:'low',label:'Low displacement risk',line1:"Creative culinary work involves physical craft, sensory judgment, and cultural expression that resists automation — though prep-level kitchen work does not.",line2:"Executive chefs and restaurant owners who combine culinary skill with business and customer experience acumen are in strong demand."},
   {k:['veterinarian','vet','veterinary'],risk:'low',label:'Low displacement risk',line1:"Veterinary medicine combines physical examination, surgical skill, and communication with pet owners — all deeply human capabilities.",line2:"The US has a significant veterinarian shortage, with BLS projecting 19% growth through 2034 and average starting salaries above $100K."},
-  {k:['firefighter','fire','first responder'],risk:'low',label:'Low displacement risk',line1:"Emergency response requires physical presence, rapid judgment in chaotic environments, and the kind of situational awareness no AI can yet replicate.",line2:"Firefighters, EMTs, and paramedics face growing demand driven by climate-related emergencies and population growth in fire-risk areas."},
+  {k:['firefighter','fire','first responder','emt','paramedic'],risk:'low',label:'Low displacement risk',line1:"Emergency response requires physical presence, rapid judgment in chaotic environments, and situational awareness no AI can replicate.",line2:"Firefighters, EMTs, and paramedics face growing demand driven by climate-related emergencies and population growth in fire-risk areas."},
   {k:['lawyer','attorney','counsel','litigation'],risk:'medium',label:'Medium displacement risk',line1:"AI handles document review, contract analysis, and legal research rapidly — reducing demand for junior associates but not for judgment-intensive legal work.",line2:"Trial lawyers, deal negotiators, and AI compliance attorneys are in strong demand. Legal tech fluency makes lawyers dramatically more productive and hireable."},
+  // CREATIVE
+  {k:['photographer','photography','photo editor','photojournalist'],risk:'medium',label:'Augmentation-prone — Transforming',line1:"HBS (Srinivasan 2026) classifies creative professional photography as augmentation-prone: AI tools (Lightroom AI, Midjourney) enhance a skilled photographer's output rather than replacing them. Stock and commodity photography is automation-prone; personal and editorial work is not.",line2:"Wedding, portrait, editorial, and documentary photographers with strong personal style and direct client relationships face minimal displacement. Photojournalists are specifically resilient because they produce original moments AI cannot generate."},
+  {k:['videographer','video editor','filmmaker','cinematographer','video producer'],risk:'medium',label:'Augmentation-prone — Transforming',line1:"AI handles B-roll generation and basic cuts efficiently, but storytelling direction, emotional pacing, and client-facing production work are augmentation-prone (HBS). AI-fluent editors are more productive, not redundant.",line2:"Filmmakers who specialize in weddings, brand content, documentary, or narrative — and use AI for post-production speed — are meaningfully more competitive than those who don't."},
+  {k:['animator','3d artist','motion graphics','vfx','visual effects'],risk:'medium',label:'Augmentation-prone — Transforming',line1:"HBS and Anthropic Economic Index both classify high-skill animation as augmentation-prone: art direction, character development, and VFX judgment require human creative expertise AI currently augments rather than replaces.",line2:"Animators who combine distinctive creative vision with AI production tools (Runway, Midjourney, EbSynth) are outcompeting peers on both sides. Gaming and streaming are actively hiring."},
+  {k:['illustrator','artist','concept artist','comic artist'],risk:'medium',label:'Partially augmented — Medium risk',line1:"AI image generators displaced commodity illustration (stock art, basic commercial work), but original artistic voice, IP creation, and commissioned work remain human-driven. WEF (2025) separates 'creative specialist' from 'routine creative' in its risk tiers.",line2:"Artists who build a distinctive style, develop original IP, or work on long-form projects — games, books, brands — are most insulated. Client relationships and unique perspective are your moat."},
+  {k:['musician','music producer','audio engineer','sound designer','composer'],risk:'low',label:'Augmentation-prone — Resilient',line1:"Live performance, emotional authenticity, and the irreplaceable creative identity of a real artist are classified as augmentation-prone by HBS. AI music tools raise floor quality for everyone — skilled musicians raise the ceiling.",line2:"Musicians who combine performance with production skills and build direct audience relationships — through streaming, live shows, or sync licensing — are growing their careers faster using AI tools for production efficiency."},
+  {k:['actor','performer','voice actor','model'],risk:'low',label:'Human performance — Resilient',line1:"Human performance, live presence, and authentic emotional range are deeply human and classified as augmentation-prone by every major research framework. SAG-AFTRA and Equity are actively negotiating AI likeness protections.",line2:"Actors with strong stage experience, voice work, and personal brand are more insulated. Union protections are expanding. The threat is to likenesses and background work — not to principal performance by trained artists."},
+  {k:['architect','architecture','interior designer','interior design'],risk:'low',label:'AI-augmented — Resilient',line1:"HBS (Srinivasan 2026) classifies design judgment, licensed professional accountability, and client advisory work as augmentation-prone — AI drafting tools make architects faster, not replaceable. BLS projects architecture to grow 5% through 2033.",line2:"Architects and interior designers who use AI for fast iteration (parametric design, rendering) while maintaining creative and client leadership are dramatically more competitive than peers using traditional methods only."},
+  {k:['social media manager','social media','content creator','influencer','content strategist'],risk:'medium',label:'Medium displacement risk',line1:"AI automates basic content generation, but audience building, community management, and authentic personal brand cannot be faked.",line2:"Content creators with genuine expertise, a distinct voice, and a loyal audience are harder to replace than generic content producers."},
+  // TRADES & PHYSICAL
+  {k:['carpenter','cabinetmaker','woodworker'],risk:'low',label:'Low displacement risk',line1:"Custom carpentry, finish work, and skilled woodworking require manual dexterity and on-site judgment that robots cannot yet replicate at scale.",line2:"Residential and commercial construction demand is strong. Carpenters with business skills who run their own crews earn well above median."},
+  {k:['welder','welding','ironworker','pipefitter'],risk:'low',label:'Low displacement risk',line1:"Skilled welding requires hands-on precision, materials knowledge, and site adaptability — the Anthropic Economic Index ranks welding among the lowest AI-exposed trades.",line2:"Manufacturing, infrastructure, and energy sectors all face welder shortages. Certified welders with specialized skills (TIG, underwater, structural) command premium pay."},
+  {k:['mechanic','auto mechanic','automotive technician','car mechanic'],risk:'low',label:'Low displacement risk',line1:"Diagnosing and repairing complex mechanical systems in real-world conditions requires hands-on expertise that automation cannot easily replace.",line2:"EV adoption is creating additional demand for electrically trained mechanics. ASE-certified technicians with diagnostic software skills are in high demand."},
+  {k:['truck driver','driver','delivery driver','logistics driver'],risk:'medium',label:'Medium displacement risk',line1:"Autonomous trucking pilots are underway, but full commercial deployment is still years away due to regulatory, safety, and infrastructure barriers.",line2:"Last-mile delivery and specialized freight (hazmat, oversized, refrigerated) are more insulated than long-haul highway driving from near-term automation."},
+  {k:['pilot','airline pilot','commercial pilot','aviation'],risk:'low',label:'Low displacement risk',line1:"Aviation requires FAA-licensed pilots, and fully autonomous commercial flight is not expected within the next decade due to safety and regulatory requirements.",line2:"There is a significant pilot shortage globally — airlines are offering signing bonuses and accelerated training programs to attract new commercial pilots."},
+  {k:['event planner','event coordinator','wedding planner'],risk:'low',label:'Low displacement risk',line1:"Event planning requires real-time problem solving, vendor relationships, and emotional intelligence that AI can assist but not replace.",line2:"Live events, weddings, and corporate experiences are growing markets. Planners who use AI for logistics while focusing on client relationships are thriving."},
+  {k:['personal trainer','fitness trainer','fitness coach','gym trainer'],risk:'low',label:'Low displacement risk',line1:"Accountability, motivation, physical correction, and the human relationship at the core of personal training are deeply resistant to automation.",line2:"Trainers who build loyal client bases, specialize (sports performance, rehab, nutrition), or expand online are growing their income significantly."},
+  {k:['nutritionist','dietitian','registered dietitian','nutrition coach'],risk:'low',label:'Low displacement risk',line1:"Personalized nutrition counseling combines medical knowledge, behavioral coaching, and ongoing client relationships — all hard to automate.",line2:"RDs in clinical, sports, and eating disorder specializations face strong demand. Telehealth is expanding reach without replacing the human relationship."},
+  {k:['pharmacist','pharmacy','pharmaceutical'],risk:'medium',label:'Medium displacement risk',line1:"Automated dispensing systems handle pill counting and refills efficiently, reducing demand for dispensing-focused pharmacist roles.",line2:"Clinical pharmacists who specialize in medication therapy management, oncology, or patient counseling are growing in demand — the role is shifting, not disappearing."},
+  {k:['librarian','library','archivist'],risk:'medium',label:'Medium displacement risk',line1:"AI handles basic information retrieval well, but research consultation, community programming, and digital literacy education remain human roles.",line2:"Librarians with data management, digital archiving, and information literacy skills are transitioning into growing roles in schools, law firms, and research institutions."},
+  {k:['police','law enforcement','detective','officer'],risk:'low',label:'Low displacement risk',line1:"Law enforcement requires physical presence, discretionary judgment, community relationship, and legal authority that AI cannot hold.",line2:"Officers who develop data analysis and digital forensics skills alongside traditional policing are increasingly valued in modern departments."},
+  {k:['construction','general contractor','builder','foreman','superintendent'],risk:'low',label:'Low displacement risk',line1:"Construction management requires on-site leadership, subcontractor coordination, and problem-solving in unpredictable physical environments.",line2:"Construction demand is surging due to infrastructure investment, housing shortages, and data center buildout. Skilled project managers are in short supply."},
 ];
 function checkJobRisk() {
   const raw = (document.getElementById('job-check-input').value || '').toLowerCase().trim();
@@ -2572,16 +2880,192 @@ function checkJobRisk() {
     l1.textContent = match.line1;
     l2.textContent = match.line2;
   } else {
-    badge.textContent = 'Role not in database';
-    badge.style.cssText = 'font-size:0.72rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;padding:0.28rem 0.75rem;border-radius:20px;background:#D3D1C7;color:#444441';
+    badge.textContent = 'Estimated: Medium risk';
+    badge.style.cssText = 'font-size:0.72rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;padding:0.28rem 0.75rem;border-radius:20px;background:#FAEEDA;color:#854F0B';
     title.textContent = document.getElementById('job-check-input').value.trim();
-    l1.textContent = "We don't have specific data on this role yet. As a general rule: roles requiring physical presence, complex human judgment, or licensed professional skills are most resilient.";
-    l2.textContent = "Use the AI Career Explorer in the Quiz tab to get a detailed breakdown of how AI affects this specific career path.";
+    // Smart fallback using HBS automation/augmentation model
+    const rawLower = raw.toLowerCase();
+    const physicalKeywords = ['repair','build','construct','drive','weld','paint','cook','clean','install','maintain','operate','lift','physical','hands'];
+    const augKeywords = ['manage','direct','strategy','lead','consult','advise','coach','analyze','research','design','create','plan','develop','negotiate','counsel'];
+    const autoKeywords = ['process','enter','file','sort','route','schedule','log','scan','transcribe','dispatch','monitor','basic','standard'];
+    const isPhysical = physicalKeywords.some(w => rawLower.includes(w));
+    const isAug = augKeywords.some(w => rawLower.includes(w));
+    const isAuto = autoKeywords.some(w => rawLower.includes(w));
+    let est = 'medium';
+    if (isPhysical) est = 'low';
+    else if (isAug && !isAuto) est = 'low';
+    else if (isAuto && !isAug) est = 'high';
+    const [estTc, estBg] = colors[est];
+    badge.textContent = est === 'low' ? 'Estimated: Augmentation-prone — Low risk' : est === 'high' ? 'Estimated: Automation-prone — Higher risk' : 'Estimated: Mixed — Medium risk';
+    badge.style.cssText = `font-size:0.72rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;padding:0.28rem 0.75rem;border-radius:20px;background:${estBg};color:${estTc}`;
+    l1.textContent = "Based on cross-referenced research (HBS/Srinivasan 2026, Anthropic Economic Index, WEF Future of Jobs 2025, Eloundou et al. Science 2023): roles built on analytical judgment, creative direction, physical skill, or authentic human relationships are augmentation-prone — AI makes them more productive. Roles built on structured, repetitive information processing are automation-prone — job postings in that category fell 13% after ChatGPT launched.";
+    l2.textContent = "Use the Career Quiz tab for a full breakdown — education paths, skills to build, and what the research says about this specific role's trajectory over the next 10 years.";
   }
+  // Add source attribution
+  let src = document.getElementById('jrr-sources');
+  if (!src) {
+    src = document.createElement('p');
+    src.id = 'jrr-sources';
+    src.style.cssText = 'font-size:0.67rem;color:#9CA3AF;margin-top:0.85rem;padding-top:0.65rem;border-top:1px solid rgba(30,58,95,0.08);line-height:1.5';
+    result.appendChild(src);
+  }
+  src.textContent = 'Sources: HBS/Srinivasan (2026) · Anthropic Economic Index · WEF Future of Jobs 2025 · Eloundou et al. Science 2023 · BLS Occupational Outlook · Goldman Sachs Global Economics';
   result.style.display = 'block';
   result.style.animation = 'none';
   void result.offsetWidth;
   result.style.animation = 'modalPop 0.22s cubic-bezier(0.22,1,0.36,1)';
+}
+
+const pathFinderProfiles = [
+  {keys:['nurse','rn','nursing','nurse practitioner','np'], family:'Healthcare', industry:'healthcare', risk:'low', fitScore:'Very strong', riskScore:'Low', fit:'Strong fit if you want direct human impact, clinical judgment, and stable demand. Nursing and advanced practice roles remain protected because the work depends on trust, physical care, and licensed accountability.', majors:['Nursing / BSN','Health Sciences','Public Health','Biology','Psychology for patient-facing specialties'], majorsText:'Best if you choose a direct clinical pathway rather than a broad health major with no license or patient experience.', skill:'Build patient-facing experience, anatomy basics, and comfort using clinical AI as a second-check tool.', next:'Volunteer or shadow in a clinic, hospital, or senior-care setting this month.', studies:'BLS 2024-2034 healthcare growth projections; WEF Future of Jobs 2025; Anthropic Economic Index 2026; Eloundou et al. Science 2023.'},
+  {keys:['software engineer','software developer','programmer','coder','developer'], family:'Software Engineer', industry:'tech', risk:'medium', fitScore:'Strong if you build', riskScore:'Mixed at entry level', fit:'Good fit if you like systems, logic, debugging, and making useful tools. AI can write routine code, so the stronger path is architecture, product judgment, debugging, security, and shipped projects.', majors:['Computer Science','Software Engineering','Data Science','Information Systems','Math plus CS'], majorsText:'A CS degree helps, but a visible portfolio matters. The safest version is fundamentals plus shipped projects that show you can solve real problems.', studies:'BLS software outlook; WEF Future of Jobs 2025; Anthropic Economic Index 2026; HBS Working Knowledge / Srinivasan et al. 2026.'},
+  {keys:['photographer','photography','photojournalist','portrait photographer','wedding photographer'], family:'Photographer', industry:'arts', risk:'medium', fitScore:'Portfolio-dependent', riskScore:'Mixed', fit:'Good fit if you like visual storytelling, real-world shoots, editing, and client trust. AI can make generic images, but it cannot capture real events, build local reputation, or replace a distinctive point of view.', majors:['Photography','Film / Media Production','Visual Journalism','Fine Arts','Marketing or Business minor'], majorsText:'Choose a program that gives you portfolio reviews, real shoots, editing practice, and business basics. A portfolio matters more than the major name.', studies:'HBS Working Knowledge / Srinivasan et al. 2026; BLS photographer outlook; WEF Future of Jobs 2025; creative labor-market evidence used across this guide.'},
+  {keys:['lawyer','attorney','counsel','litigation'], family:'Lawyer', industry:'law', risk:'medium', fitScore:'Strong for judgment and argument', riskScore:'Mixed', fit:'Good fit if you like reading, argument, fairness, negotiation, and high-stakes judgment. AI can summarize and draft, but people still own strategy, ethics, clients, and accountability.', majors:['Political Science','Philosophy','Economics','History','English / Writing'], majorsText:'Pre-law is less important than strong writing, analytical reading, and a high GPA. Add tech, policy, or compliance literacy if AI law interests you.', studies:'Goldman Sachs 2023; Anthropic Economic Index 2026; Eloundou et al. Science 2023; WEF Future of Jobs 2025.'},
+  {keys:['electrician','electrical contractor','lineman'], family:'Electrician', industry:'engineering', risk:'low', fitScore:'Very strong', riskScore:'Low', fit:'Strong fit if you like hands-on problem-solving, physical systems, and a clear paid training path. AI can help plan or diagnose, but the work still has to be done safely on-site by a trained person.', majors:['IBEW or local apprenticeship','Community college electrical technology','Construction management','Electrical engineering for design roles'], majorsText:'The best path is often a paid apprenticeship, not a four-year degree. Choose college if you want engineering, management, or design work.', studies:'Anthropic Economic Index 2026; BLS electrician outlook; WEF Future of Jobs 2025; infrastructure and clean-energy labor evidence.'},
+  {keys:['doctor','physician','surgeon','medical','dentist','dental','veterinarian','vet'], family:'Clinical Care', industry:'healthcare', risk:'low', fitScore:'Very strong', riskScore:'Low', fit:'Strong fit if you can commit to a long training path and like high-responsibility decisions. AI can support diagnosis, but licensed clinical judgment and patient trust remain the core value.', majors:['Biology','Chemistry / Biochemistry','Biomedical Engineering','Public Health','Neuroscience'], majorsText:'Choose a rigorous pre-health path with strong grades, clinical exposure, and research or service hours.', skill:'Pair science coursework with communication, ethics, and data literacy. Admissions committees notice real service hours.', next:'Book one shadowing conversation and start a simple log of patient-care exposure.', studies:'BLS Occupational Outlook; WEF Future of Jobs 2025; Anthropic Economic Index 2026; clinical AI adoption research summarized across the site.'},
+  {keys:['software','developer','programmer','coder','computer science','ai engineer','machine learning','data scientist','cybersecurity'], family:'Technology', industry:'tech', risk:'low', fitScore:'Strong', riskScore:'Low to mixed at entry level', fit:'Strong fit if you like systems, logic, and building useful tools. AI is compressing some junior tasks, but people who can architect, debug, secure, and explain systems remain valuable.', majors:['Computer Science','Data Science','Cybersecurity','Information Systems','Math or Statistics plus CS'], majorsText:'The safest version is technical depth plus a portfolio. A credential alone is not enough.', skill:'Build real projects with AI tools, but learn the fundamentals well enough to debug without them.', next:'Create one small portfolio project on GitHub that solves a real problem you can explain.', studies:'BLS software and data projections; WEF Future of Jobs 2025; Anthropic Economic Index 2026; HBS/Srinivasan 2026 augmentation model.'},
+  {keys:['accountant','accounting','bookkeeper','financial analyst','finance','analyst','banking','wealth'], family:'Business & Finance', industry:'finance', risk:'medium', fitScore:'Good if quantitative', riskScore:'Mixed', fit:'Good fit if you like numbers, markets, decisions, and practical tradeoffs. Routine bookkeeping is exposed, but analysis, advisory, risk, and client judgment are stronger.', majors:['Finance','Accounting plus Analytics','Economics','Business Analytics','Quantitative Finance'], majorsText:'Best majors combine business judgment with data fluency. Avoid generic business without a specialty.', skill:'Learn Excel deeply, then Python or SQL. Routine spreadsheet work is vulnerable; judgment plus data skill travels well.', next:'Analyze one company or budget using public data and turn it into a one-page memo.', studies:'Goldman Sachs 2023 AI exposure report; HBS/Srinivasan 2026 automation vs augmentation; BLS business and financial projections; WEF Future of Jobs 2025.'},
+  {keys:['lawyer','attorney','law','paralegal','legal'], family:'Law & Policy', industry:'law', risk:'medium', fitScore:'Good for argument and judgment', riskScore:'Mixed', fit:'Good fit if you like reading, argument, fairness, and navigating complex systems. AI pressures document review and junior research, but judgment-heavy advocacy and negotiation remain human-led.', majors:['Political Science','Public Policy','Economics','Philosophy','History or English with strong writing'], majorsText:'Choose writing-heavy coursework and add technology, policy, or compliance literacy.', skill:'Develop legal research, writing, negotiation, and AI-assisted document review skills.', next:'Read one real case brief and summarize the facts, issue, holding, and reasoning in plain English.', studies:'Goldman Sachs 2023 legal exposure estimate; Anthropic Economic Index 2026; Eloundou et al. Science 2023; WEF Future of Jobs 2025.'},
+  {keys:['teacher','education','educator','professor','counselor','social worker','therapist','psychologist'], family:'Human Development', industry:'education', risk:'low', fitScore:'Strong for people-centered work', riskScore:'Low', fit:'Strong fit if you enjoy mentorship, learning, emotional nuance, or helping people develop. AI can help plan and personalize, but trust and relationship quality are the moat.', majors:['Education','Psychology','Social Work','Human Development','Speech Pathology'], majorsText:'The strongest path leads to a license, certification, or supervised practice, not just a broad interest in helping.', skill:'Focus on trust, classroom or client presence, assessment, and responsible AI use for planning and feedback.', next:'Tutor, mentor, or volunteer with students so you can test whether the day-to-day work fits.', studies:'BLS education and counseling projections; WEF Future of Jobs 2025; Anthropic Economic Index 2026; human-skill findings summarized in the site.'},
+  {keys:['graphic','designer','ux','product designer','writer','journalist','marketing','copywriter','creative','film','media','content creator','social media'], family:'Creative & Communication', industry:'media', risk:'medium', fitScore:'Good with a portfolio', riskScore:'Mixed to high for generic work', fit:'Good fit if you like storytelling, design, persuasion, or audience insight. Generic output is exposed, but research-backed, strategic, and distinctive work is stronger.', majors:['UX / HCI','Journalism plus Data','Design','Strategic Communications','Marketing Analytics'], majorsText:'A portfolio matters more than the major name. Choose programs that force real projects and critique.', skill:'Move beyond generic output. Build taste, research ability, audience insight, and a distinctive portfolio.', next:'Publish one case study showing your process, not just the final artifact.', studies:'Eloundou et al. Science 2023; HBS/Srinivasan 2026 augmentation model; WEF Future of Jobs 2025; BLS creative and media outlooks.'},
+  {keys:['photographer','photography','photo','videographer','video editor','filmmaker','cinematographer','animator','illustrator','artist','concept artist','musician','music producer','audio engineer','composer','actor','performer','voice actor'], family:'Arts & Creative Media', industry:'arts', risk:'medium', fitScore:'Portfolio-dependent', riskScore:'Mixed', fit:'Good fit if you have a distinctive voice and are willing to build an audience or client base. AI pressures commodity production, but original taste, performance, and relationships still matter.', majors:['Film Production','Fine Arts','Photography','Music Production','Design or Animation'], majorsText:'Formal study can help, but portfolio, network, and consistent output are the real signal.', skill:'Build a distinctive personal style and client portfolio. Use AI for speed while keeping creative direction human.', next:'Complete one paid or portfolio project this month. Real client work beats any course or credential here.', studies:'Eloundou et al. Science 2023; WEF Future of Jobs 2025; HBS/Srinivasan 2026; creative labor-market signals summarized across the site.'},
+  {keys:['electrician','plumber','hvac','welder','mechanic','trade','construction','civil engineer','engineer','robotics','solar','wind'], family:'Engineering & Skilled Trades', industry:'engineering', risk:'low', fitScore:'Very strong', riskScore:'Low', fit:'Very strong fit if you like physical systems, troubleshooting, infrastructure, or building things that must work in the real world. These paths are among the most AI-resilient.', majors:['Electrical Engineering','Mechanical Engineering','Civil Engineering','Industrial Technology','Paid apprenticeship'], majorsText:'Pick engineering for design and analysis; pick apprenticeship/trades for paid hands-on licensing routes.', skill:'Physical systems, safety, troubleshooting, and licensing are the moat. Add CAD, sensors, or automation basics if relevant.', next:'Contact a local union, community college, or engineering club and ask about entry pathways.', studies:'Anthropic Economic Index 2026 skilled-trades exposure; BLS 2024-2034; WEF Future of Jobs 2025; infrastructure and clean-energy labor findings in the site.'},
+  {keys:['cashier','data entry','admin','assistant','customer service','receptionist'], family:'Operations', industry:'retail', risk:'high', fitScore:'Bridge path', riskScore:'High for routine tasks', fit:'This can be a useful starting point, but it is risky as a long-term plan if the work stays repetitive. The safer path is moving into operations, customer experience, analytics, or domain-specific coordination.', majors:['Business Analytics','Operations Management','Healthcare Administration','Supply Chain','Information Systems'], majorsText:'Use this as a bridge toward a specialty with judgment, customer knowledge, or systems skill.', skill:'Learn workflow automation, spreadsheets, customer escalation, and domain knowledge so you move above repetitive tasks.', next:'Pick one process at school or work and redesign it with a checklist, spreadsheet, or simple automation.', studies:'HBS/Srinivasan 2026 automation-prone findings; WEF Future of Jobs 2025; Eloundou et al. Science 2023; BLS occupation outlooks.'}
+];
+
+let currentPathFinderIndustry = null;
+
+function runPathFinder() {
+  const input = (document.getElementById('pf-career').value || '').trim();
+  const stage = document.getElementById('pf-stage').value;
+  const priority = document.getElementById('pf-priority').value;
+  const result = document.getElementById('pf-result');
+  const title = document.getElementById('pf-title');
+  const note = document.getElementById('pf-note');
+  const risk = document.getElementById('pf-risk');
+  const fitScore = document.getElementById('pf-fit-score');
+  const riskScore = document.getElementById('pf-risk-score');
+  const industry = document.getElementById('pf-industry');
+  const fit = document.getElementById('pf-fit');
+  const aiRisk = document.getElementById('pf-ai-risk');
+  const majorsText = document.getElementById('pf-majors-text');
+  const majorsList = document.getElementById('pf-major-list');
+  const sources = document.getElementById('pf-sources');
+  const industryBtn = document.getElementById('pf-industry-btn');
+  if (!input) {
+    document.getElementById('pf-career').focus();
+    return;
+  }
+
+  const raw = input.toLowerCase();
+  let profile = pathFinderProfiles.find(p => p.keys.some(k => keywordMatches(raw, k)));
+  const dbMatch = jobRiskDB.find(entry => entry.k.some(k => keywordMatches(raw, k)));
+  if (!profile) {
+    profile = {
+      family:'Custom Path',
+      industry:'consulting',
+      risk:dbMatch ? dbMatch.risk : 'medium',
+      fitScore:'Needs research',
+      riskScore:'Estimated mixed',
+      fit:'This career is not in the detailed PathFinder library yet, so the safest read is to treat it as a custom path. Look for how much of the work is repetitive versus judgment-heavy.',
+      majors:['Domain major','Data or analytics minor','Writing-intensive coursework','Portfolio projects'],
+      majorsText:'Choose a major that builds domain expertise, writing, data fluency, and hands-on projects in this field.',
+      studies:'HBS/Srinivasan 2026 automation vs augmentation; WEF Future of Jobs 2025; Anthropic Economic Index 2026; BLS Occupational Outlook.'
+    };
+  }
+  if (dbMatch) profile = {...profile, risk:dbMatch.risk};
+
+  const stageText = {
+    hs:'For high school: sample the field before choosing a major.',
+    college:'For college: turn your coursework into proof of skill.',
+    parent:'For families: look for evidence of fit, not just a familiar major name.'
+  };
+  const priorityText = {
+    stability:'Because you chose stable demand, favor licensed, technical, or relationship-heavy roles.',
+    salary:'Because you chose higher earnings, add quantitative skill and pick a specialization early.',
+    purpose:'Because you chose meaningful work, get close to the people served by the field before committing.',
+    flex:'Because you chose flexibility, choose portable skills: data, writing, systems thinking, and AI fluency.'
+  };
+  const riskColors = {
+    low:['Low AI risk','#EAF3DE','#3B6D11'],
+    medium:['Mixed AI risk','#FAEEDA','#854F0B'],
+    high:['High AI risk','#FCEBEB','#A32D2D']
+  };
+  const [label,bg,color] = riskColors[profile.risk] || riskColors.medium;
+
+  title.textContent = `${input}: ${profile.family}`;
+  note.textContent = `${stageText[stage]} ${priorityText[priority]}`;
+  risk.textContent = label;
+  risk.style.background = bg;
+  risk.style.color = color;
+  fitScore.textContent = profile.fitScore || 'Good';
+  riskScore.textContent = profile.riskScore || label;
+  industry.textContent = getIndustryLabel(profile.industry);
+  fit.textContent = profile.fit;
+  aiRisk.textContent = dbMatch ? `${dbMatch.line1} ${dbMatch.line2}` : getDefaultRiskText(profile.risk);
+  majorsText.textContent = profile.majorsText;
+  majorsList.innerHTML = (profile.majors || []).map(m => `<span class="pf-major-chip">${m}</span>`).join('');
+  sources.textContent = `Sources considered: ${profile.studies} The HBS article is one lens, then checked against BLS, WEF, Anthropic, Eloundou et al., and Goldman Sachs where relevant.`;
+  currentPathFinderIndustry = profile.industry || null;
+  industryBtn.textContent = `Open ${getIndustryLabel(profile.industry)} industry →`;
+  industryBtn.style.display = profile.industry ? 'inline-flex' : 'none';
+  result.classList.add('open');
+}
+
+function keywordMatches(raw, key) {
+  const k = key.toLowerCase().trim();
+  if (!k) return false;
+  if (k.length <= 3) {
+    return new RegExp(`(^|[^a-z0-9])${escapeRegExp(k)}([^a-z0-9]|$)`).test(raw);
+  }
+  return raw.includes(k) || k.includes(raw);
+}
+
+function escapeRegExp(text) {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function getDefaultRiskText(risk) {
+  if (risk === 'low') return 'Lower AI risk: this path relies more on human judgment, licensed accountability, physical skill, relationship trust, or complex problem-solving than on repeatable information processing.';
+  if (risk === 'high') return 'Higher AI risk: this path includes routine, structured tasks that current AI systems can automate quickly. The safer move is to climb toward judgment, systems ownership, or domain expertise.';
+  return 'Mixed AI risk: parts of the work can be automated, but the stronger roles use AI as leverage for judgment, strategy, analysis, relationship work, or creative direction.';
+}
+
+function getIndustryLabel(id) {
+  const labels = {
+    finance:'Finance',
+    law:'Law',
+    tech:'Technology',
+    healthcare:'Healthcare',
+    media:'Media',
+    education:'Education',
+    engineering:'Engineering',
+    marketing:'Marketing',
+    consulting:'Consulting',
+    government:'Government & Policy',
+    trades:'Skilled Trades',
+    energy:'Energy & Clean Tech',
+    biotech:'Biotech & Pharma',
+    retail:'Retail & E-Commerce',
+    transportation:'Transportation & Logistics',
+    realestate:'Real Estate',
+    arts:'Arts & Creative'
+  };
+  return labels[id] || 'Industry Guide';
+}
+
+function openRecommendedIndustry() {
+  if (!currentPathFinderIndustry) return;
+  showTab('industries');
+  setTimeout(() => {
+    const target = Array.from(document.querySelectorAll('.ind-tab')).find(btn => btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${currentPathFinderIndustry}'`));
+    if (target) switchInd(target, currentPathFinderIndustry);
+  }, 40);
+}
+
+function openIndustryFromHome(id) {
+  currentPathFinderIndustry = id;
+  openRecommendedIndustry();
 }
 
 // ── STAT COUNTER ANIMATION ──
